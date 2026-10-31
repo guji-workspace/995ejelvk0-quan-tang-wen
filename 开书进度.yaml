@@ -1,11 +1,11 @@
-# 开书进度：本书开书流程的唯一当前状态（格式见 guji-manager doc/开书全流程/开书全流程.md 第五节）
+# 开书进度：本书开书流程的唯一当前状态（格式见 guji-manager doc/01-开新书/开书全流程.md 第五节）
 # 会话换了、容器回收了，读这份就能续上。改动随进度提交。
 book_id: 995ejelvk0
 title: 欽定全唐文（嘉慶內府本）
 ws_repo: guji-workspace/995ejelvk0-quan-tang-wen
 goal: v0.1
 pilot_vols: ["04", "05"]          # 用户 10-31 定册 05 为第二先行册
-vols: {registered: "01-62", total: 248}
+vols: {registered: "01-64", total: 248, by_ws_pointer: "01-64（10-31 补写）"}
 reference: {source: "Kanripo KR4h0168", file: qtw_kanripo_grid.txt, line_is_column: true}
 glyph_borrow: [siku-zongmu]
 approvals:
@@ -15,13 +15,22 @@ approvals:
     scope: standing
   - {what: "撤回第一轮 9 条 日/巳/曰 人裁", by: Sheldon, on: 2026-10-31, scope: once}
 gates:
-  A: {status: pending, line: "放行≥90%（正文≥95%），先行册≥2", note: "册04 已达 97.4%，差册05"}
+  A: {status: met, line: "放行≥90%（正文≥95%），先行册≥2", note: "册04 97.4%、册05 96.0%（正文 96.1%），10-31 达标；铺开前先收册05 快审"}
   B: {status: pending}
 steps:
   "04": {S5: done, S6: done, S7: done, S8: done, S9: done, S10: partial, S11: done, admitted_pct: 97.4, pack: cvdevpg38746280cc06-c--g-398450-qtw04-seg-toc}
-  "05": {S5: todo}
+  "05": {S5: done, S6: done, S7: done, S8: done, S9: waiting_human, admitted_pct: 96.0, pack: cvdevpg206414f9efed-c--g-af6af4-qtw05-first, central_rev: 382141}
 jobs: []
 review_queue:
+  - id: 995ejelvk0-05-S9-1
+    kind: review
+    blocking: []
+    size: "402 格、11 页（快审减量：候选 1,151 → 跳过 188、OCR 撤下 441、每字 ≤3 格）"
+    link: "https://claude.ai/artifact/4MWBtnxEpyWKgGdfp8YRHK"
+    batch: 05r1
+    created_at: 2026-10-31T20:46:00Z
+    status: open
+    remind: ["2026-11-01T20:46:00Z", "2026-11-03T20:46:00Z"]
   - id: 995ejelvk0-04-S10-1
     kind: review
     blocking: []
@@ -32,4 +41,5 @@ review_queue:
     note: "切分已大改，剩余页格号已变，不再请审；册05 起出新页"
 metrics:
   "04": {cells: 33160, admitted: 32295, admitted_pct: 97.4}
-next_wakeup: null
+  "05": {cells: 35942, admitted: 34516, admitted_pct: 96.0, body_pct: 96.1, anchored_pages: "218/222"}
+next_wakeup: "2026-11-01T08:25:00Z"
