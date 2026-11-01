@@ -31,6 +31,7 @@ jobs:
   - {ids: "1670-1679", what: "册06–15 第二轮", status: done}
   - {ids: "1797-1800", what: "册08–11 Kanripo 半叶分界校正后从 align_ref 重跑（包 qtw<V>-bhead）", status: done}
   - {ids: "1801,1803-1807", what: "册05/07/12–15 补文意小头 L2 后从 seed_admit 重落（包 qtw<V>-l2，05 为 -l2-a2；06 同配置即 #1794）", status: done}
+  - {ids: "1848-1858", what: "册05–15 码位归一（config/codepoints.yaml 32 条，Sheldon 11-01 码位对照页定）后从 seed_admit 重落（包 qtw<V>-cp）；册04 包在旧 cv 上未跑", status: running}
 review_queue:
   - id: 995ejelvk0-05-S9-1
     batch: 05r1
