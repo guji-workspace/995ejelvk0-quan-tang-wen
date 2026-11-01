@@ -56,6 +56,8 @@ metrics:  # b1r1 包（#1760–1770，2026-11-01）
   "13": {cells: 36721, admitted_pct: 96.8}
   "14": {cells: 31268, admitted_pct: 97.9}
   "15": {cells: 29804, admitted_pct: 98.0}
+decisions:
+  - "2026-11-01 Sheldon：L3 在线（Claude 读上下文判形近字，花 API 费）先不开；不写 book_prompt.json"
 open_questions:
   - "L2 文意小头（jys/ry/rm）已推库并挂上，但执行机缺 SikuRoBERTa 编码器（abstain:no_encoder），#1794 零变化；已请 A30 装，好了重交 05/06"
   - "码位对照页 https://claude.ai/artifact/SpcRmvvvcEjn5xYYGwdM6B 等用户点（33 对，含 爲/為、旣/既）"
