@@ -32,7 +32,9 @@ jobs:
   - {ids: "1797-1800", what: "册08–11 Kanripo 半叶分界校正后从 align_ref 重跑（包 qtw<V>-bhead）", status: done}
   - {ids: "1801,1803-1807", what: "册05/07/12–15 补文意小头 L2 后从 seed_admit 重落（包 qtw<V>-l2，05 为 -l2-a2；06 同配置即 #1794）", status: done}
   - {ids: "1848-1858", what: "码位归一首交：误以为执行机读工作区仓 config，已撤", status: cancelled}
-  - {ids: "1859-1869", what: "册05–15 码位归一（中心库 config/codepoints.yaml 32 条，rev 411063，Sheldon 11-01 码位对照页定）后从 seed_admit 重落（包 qtw<V>-cp）；册04 包在旧 cv 上未跑", status: running}
+  - {ids: "1859-1862,1866-1869", what: "册05–08、12–15 码位归一（中心库 config/codepoints.yaml 32 条，rev 411063，Sheldon 11-01 码位对照页定）后从 seed_admit 重落（包 qtw<V>-cp）；册04 包在旧 cv 上未跑", status: running}
+  - {ids: "1863-1865", what: "09–11 码位轮，并入 pbfix2 已撤", status: cancelled}
+  - {ids: "1870-1872", what: "册09–11 第二轮 b 头校正（10 个偏 7–9 行，book-text #378，语料 rev 411090）＋码位归一，从 align_ref 重跑（包 qtw<V>-pbfix2）", status: running}
 review_queue:
   - id: 995ejelvk0-05-S9-1
     batch: 05r1
