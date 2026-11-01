@@ -29,6 +29,7 @@ jobs:
   - {ids: "1568,1569,1580-1588", what: "册05 重跑、册06–15 首跑", status: done}
   - {ids: "1669", what: "册05 补锚后重落 seed_admit", status: done, human_chars: 384}
   - {ids: "1670-1679", what: "册06–15 第二轮", status: done}
+  - {ids: "1797-1800", what: "册08–11 Kanripo 半叶分界校正后从 align_ref 重跑（包 qtw<V>-bhead）", status: done}
 review_queue:
   - id: 995ejelvk0-05-S9-1
     batch: 05r1
@@ -48,17 +49,19 @@ metrics:  # b1r1 包（#1760–1770，2026-11-01）
   "05": {cells: 35942, admitted: 34928, admitted_pct: 97.2}
   "06": {cells: 32675, admitted_pct: 95.4}
   "07": {cells: 33267, admitted_pct: 94.4}
-  "08": {cells: 30912, admitted_pct: 91.1}
-  "09": {cells: 28455, admitted_pct: 89.4}
-  "10": {cells: 26921, admitted_pct: 90.1}
-  "11": {cells: 26748, admitted_pct: 89.3}
+  "08": {cells: 30912, admitted_pct: 94.7, b1r1_pct: 91.1, pack: qtw08-bhead}
+  "09": {cells: 28455, admitted_pct: 95.2, b1r1_pct: 89.4, pack: qtw09-bhead}
+  "10": {cells: 26921, admitted_pct: 95.9, b1r1_pct: 90.1, pack: qtw10-bhead}
+  "11": {cells: 26748, admitted_pct: 94.9, b1r1_pct: 89.3, pack: qtw11-bhead}
   "12": {cells: 27615, admitted_pct: 97.5}
   "13": {cells: 36721, admitted_pct: 96.8}
   "14": {cells: 31268, admitted_pct: 97.9}
   "15": {cells: 29804, admitted_pct: 98.0}
 decisions:
+  - "2026-11-01 Sheldon：Kanripo 原数据有问题的直接修 book-text（卷20–34 b 面分界 249 处、卷22/23 01a，book-text #376）；并给 Kanripo 上游交 PR（材料 /mnt/project-files/qtw-tools/kanripo-pr/，等 open-guji fork）"
   - "2026-11-01 Sheldon：L3 在线（Claude 读上下文判形近字，花 API 费）先在 05、06 试点量用量再铺开。book_prompt.json 已写；config/book_defaults.yaml 缺省关 L3，试点单 #1795/#1796 用 params 显式开"
 open_questions:
+  - "pending-stats（2026-11-01 bhead 后）：12 册待审 19,644 → 13,792；S 切分／对位 8,832 → 3,998；现最大头 Z 形近字组 4,315（Z1 2,366、Z4 1,542）、L 字形库 3,705（L3 证据不足 1,950）。报告 /mnt/project-files/qtw-tools/pending-2026-11-01-bhead/"
   - "L3 试点（#1795/#1796，2026-11-01）：05 +61、06 +47 放行，新放行 127 格核对 0 错；每册约 $1.7，全书约 $420；閒→間 7 格降审要在 book_prompt 写明本书刻閒。明细 /mnt/project-files/qtw-tools/L3试点-2026-11-01.md；等 Sheldon 定铺不铺"
   - "L2 小头：#1794 时执行机缺 SikuRoBERTa（零变化）；cv #828/#829 执行机领单前自检补装，已随 L3 试点单 #1795/#1796 重交"
   - "码位对照页 https://claude.ai/artifact/SpcRmvvvcEjn5xYYGwdM6B 等用户点（33 对，含 爲/為、旣/既）"
