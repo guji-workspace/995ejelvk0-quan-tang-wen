@@ -62,6 +62,8 @@ metrics:  # b1r1 包（#1760–1770，2026-11-01）
 decisions:
   - "2026-11-01 Sheldon：Kanripo 原数据有问题的直接修 book-text（卷20–34 b 面分界 249 处、卷22/23 01a，book-text #376）；并给 Kanripo 上游交 PR（材料 /mnt/project-files/qtw-tools/kanripo-pr/，等 open-guji fork）"
   - "2026-11-01 Sheldon：L3 在线（Claude 读上下文判形近字，花 API 费）先在 05、06 试点量用量再铺开。book_prompt.json 已写；config/book_defaults.yaml 缺省关 L3，试点单 #1795/#1796 用 params 显式开"
+  - "2026-11-01 Sheldon：字形库 edition 一律用书 ID。本书 1,943 字头／5,721 例已从 v2 改成 995ejelvk0 并推库（rev 411059），glyph_meta 有 book_edition；殿本 siku-zongmu→96mid1ogzk、史記 v2→988g3f0wsu 等已请 A23 改。规范 /mnt/project-files/qtw-tools/ID与edition规范.md"
+  - "字形库切换标准（建议，待 Sheldon 定）：本书库按格覆盖（参照字在本书库有刻例的格占比，含人裁与已放行入库）≥98%，且留出集上「本书库单用」比「本书优先＋殿本兜底」放行不降、错放不增，才把 glyph_lib.borrow 清空整切殿本。11-01 在册05/08/12 上本书 89%、合计（含殿本）95.6%，约 900 字只有殿本样本，现不具备；缺字靠线5快审补刻例"
 open_questions:
   - "pending-stats（2026-11-01 bhead 后）：12 册待审 19,644 → 13,792；S 切分／对位 8,832 → 3,998；现最大头 Z 形近字组 4,315（Z1 2,366、Z4 1,542）、L 字形库 3,705（L3 证据不足 1,950）。报告 /mnt/project-files/qtw-tools/pending-2026-11-01-bhead/"
   - "pending-stats（2026-11-01 L2 全落后）：12 册待审 13,635（05 1,014→978）；Z1 2,214、Z4 1,542、L3 1,950、S1+S2 3,300。之后由分线（字形库／切分对位／形近字组／码位异体／快审页）各自降，本线程只总览"
