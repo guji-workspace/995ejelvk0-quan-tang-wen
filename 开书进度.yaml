@@ -57,9 +57,9 @@ metrics:  # b1r1 包（#1760–1770，2026-11-01）
   "14": {cells: 31268, admitted_pct: 97.9}
   "15": {cells: 29804, admitted_pct: 98.0}
 decisions:
-  - "2026-11-01 Sheldon：L3 在线（Claude 读上下文判形近字，花 API 费）先不开；不写 book_prompt.json"
+  - "2026-11-01 Sheldon：L3 在线（Claude 读上下文判形近字，花 API 费）先在 05、06 试点量用量再铺开。book_prompt.json 已写；config/book_defaults.yaml 缺省关 L3，试点单 #1795/#1796 用 params 显式开"
 open_questions:
-  - "L2 文意小头（jys/ry/rm）已推库并挂上，但执行机缺 SikuRoBERTa 编码器（abstain:no_encoder），#1794 零变化；已请 A30 装，好了重交 05/06"
+  - "L2 小头：#1794 时执行机缺 SikuRoBERTa（零变化）；cv #828/#829 执行机领单前自检补装，已随 L3 试点单 #1795/#1796 重交"
   - "码位对照页 https://claude.ai/artifact/SpcRmvvvcEjn5xYYGwdM6B 等用户点（33 对，含 爲/為、旣/既）"
   - "爲/為：match_margin 把 Kanripo 的 為 放行到书上 爲 的格（册05 243 格、册04 138 格），建议改回书上字形 爲（旣/既 同）；等用户定"
 next_wakeup: "2026-11-02T02:56:00Z"
