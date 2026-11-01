@@ -43,19 +43,21 @@ review_queue:
     created_at: 2026-11-01T02:55:00Z
     status: open
     remind: ["2026-11-02T02:56:00Z", "2026-11-04T02:56:00Z"]
-metrics:
+metrics:  # b1r1 包（#1760–1770，2026-11-01）
   "04": {admitted_pct: 97.5}
-  "05": {cells: 35942, admitted: 34919, admitted_pct: 97.2}
-  "06": {cells: 32675, admitted_pct: 95.3}
-  "07": {cells: 33267, admitted_pct: 94.3}
-  "08": {cells: 30912, admitted_pct: 90.6}
-  "09": {cells: 28455, admitted_pct: 88.6}
-  "10": {cells: 26921, admitted_pct: 89.3}
-  "11": {cells: 26748, admitted_pct: 88.6}
+  "05": {cells: 35942, admitted: 34928, admitted_pct: 97.2}
+  "06": {cells: 32675, admitted_pct: 95.4}
+  "07": {cells: 33267, admitted_pct: 94.4}
+  "08": {cells: 30912, admitted_pct: 91.1}
+  "09": {cells: 28455, admitted_pct: 89.4}
+  "10": {cells: 26921, admitted_pct: 90.1}
+  "11": {cells: 26748, admitted_pct: 89.3}
   "12": {cells: 27615, admitted_pct: 97.5}
   "13": {cells: 36721, admitted_pct: 96.8}
   "14": {cells: 31268, admitted_pct: 97.9}
-  "15": {cells: 29804, admitted_pct: 97.9}
+  "15": {cells: 29804, admitted_pct: 98.0}
 open_questions:
+  - "L2 文意小头（jys/ry/rm）已推库并挂上，但执行机缺 SikuRoBERTa 编码器（abstain:no_encoder），#1794 零变化；已请 A30 装，好了重交 05/06"
+  - "码位对照页 https://claude.ai/artifact/SpcRmvvvcEjn5xYYGwdM6B 等用户点（33 对，含 爲/為、旣/既）"
   - "爲/為：match_margin 把 Kanripo 的 為 放行到书上 爲 的格（册05 243 格、册04 138 格），建议改回书上字形 爲（旣/既 同）；等用户定"
 next_wakeup: "2026-11-02T02:56:00Z"
