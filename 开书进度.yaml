@@ -15,31 +15,47 @@ approvals:
     scope: standing
   - {what: "撤回第一轮 9 条 日/巳/曰 人裁", by: Sheldon, on: 2026-10-31, scope: once}
 gates:
-  A: {status: met, line: "放行≥90%（正文≥95%），先行册≥2", note: "册04 97.4%、册05 96.0%（正文 96.1%），10-31 达标；铺开前先收册05 快审"}
+  A: {status: met, line: "放行≥90%（正文≥95%），先行册≥2", note: "册04 97.5%、册05 97.6%（快审第1轮后），10-31 达标"}
   B: {status: pending}
 steps:
-  "04": {S5: done, S6: done, S7: done, S8: done, S9: done, S10: partial, S11: done, admitted_pct: 97.4, pack: cvdevpg38746280cc06-c--g-398450-qtw04-seg-toc}
-  "05": {S5: done, S6: done, S7: done, S8: done, S9: waiting_human, admitted_pct: 96.0, pack: cvdevpg206414f9efed-c--g-af6af4-qtw05-first, central_rev: 382141}
-jobs: []
+  "04": {S5: done, S6: done, S7: done, S8: done, S9: done, S10: partial, S11: done, admitted_pct: 97.5, pack: cvdevpg206414f9efed-c--g-51cecc-qtw04-revoke9}
+  "05": {S9: done, S10: done, S11: done, admitted_pct: 97.2, pack: cv0.6.1.dev37pg3773155662f9-c--g-76dd84-qtw05-anchor, note: "人裁 384 条补锚后任务库重落全对上"}
+batch1:
+  vols: "06-15"
+  status: waiting_human
+  flow: "任务库首跑 → 本机 stageB（自动钉位/目录页/格位表）→ db push → 任务库第二轮（row_segment 起，base=首跑包）"
+  r2_packs: "cv0.6.1.dev37pg3773155662f9-c--g-76dd84-qtw<册>-r2（14 为 -r2-a3）"
+jobs:
+  - {ids: "1568,1569,1580-1588", what: "册05 重跑、册06–15 首跑", status: done}
+  - {ids: "1669", what: "册05 补锚后重落 seed_admit", status: done, human_chars: 384}
+  - {ids: "1670-1679", what: "册06–15 第二轮", status: done}
 review_queue:
   - id: 995ejelvk0-05-S9-1
-    kind: review
-    blocking: []
-    size: "402 格、11 页（快审减量：候选 1,151 → 跳过 188、OCR 撤下 441、每字 ≤3 格）"
-    link: "https://claude.ai/artifact/4MWBtnxEpyWKgGdfp8YRHK"
     batch: 05r1
-    created_at: 2026-10-31T20:46:00Z
-    status: open
-    remind: ["2026-11-01T20:46:00Z", "2026-11-03T20:46:00Z"]
-  - id: 995ejelvk0-04-S10-1
+    link: "https://claude.ai/artifact/4MWBtnxEpyWKgGdfp8YRHK"
+    status: done
+    result: "402 格：384 对、18 不对；已落库补锚"
+  - id: 995ejelvk0-b1-S10-1
     kind: review
-    blocking: []
-    size: "第二轮快审剩约 7 页"
-    link: "https://claude.ai/artifact/8Z3YAskMJUh5AxD7iRhHLe"
-    created_at: 2026-10-30T02:49:00Z
-    status: partial
-    note: "切分已大改，剩余页格号已变，不再请审；册05 起出新页"
+    size: "2,021 格、51 页（候选 20,248 → 规则跳过 2,516、OCR 撤下 13,261、模型放行 0、每字 ≤3 格；含册04 剩余格）"
+    link: "https://claude.ai/artifact/1RjCXMxTCjdPsybe9xDUGi"
+    batch: b1r1
+    created_at: 2026-11-01T02:55:00Z
+    status: open
+    remind: ["2026-11-02T02:56:00Z", "2026-11-04T02:56:00Z"]
 metrics:
-  "04": {cells: 33160, admitted: 32295, admitted_pct: 97.4}
-  "05": {cells: 35942, admitted: 34516, admitted_pct: 96.0, body_pct: 96.1, anchored_pages: "218/222"}
-next_wakeup: "2026-11-01T08:25:00Z"
+  "04": {admitted_pct: 97.5}
+  "05": {cells: 35942, admitted: 34919, admitted_pct: 97.2}
+  "06": {cells: 32675, admitted_pct: 95.3}
+  "07": {cells: 33267, admitted_pct: 94.3}
+  "08": {cells: 30912, admitted_pct: 90.6}
+  "09": {cells: 28455, admitted_pct: 88.6}
+  "10": {cells: 26921, admitted_pct: 89.3}
+  "11": {cells: 26748, admitted_pct: 88.6}
+  "12": {cells: 27615, admitted_pct: 97.5}
+  "13": {cells: 36721, admitted_pct: 96.8}
+  "14": {cells: 31268, admitted_pct: 97.9}
+  "15": {cells: 29804, admitted_pct: 97.9}
+open_questions:
+  - "爲/為：match_margin 把 Kanripo 的 為 放行到书上 爲 的格（册05 243 格、册04 138 格），建议改回书上字形 爲（旣/既 同）；等用户定"
+next_wakeup: "2026-11-02T02:56:00Z"
