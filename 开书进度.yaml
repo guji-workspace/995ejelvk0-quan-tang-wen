@@ -43,8 +43,8 @@ jobs:
   - {ids: "1896-1905", what: "册06–15 l5r1 重落：线 5 推库 rev 423141 时本地旧 glyph.db 被导出、覆盖了本书字形库（544 字头/1,158 例，edition v2），已撤；等线 1 修复字形库后重交", status: cancelled}
   - {ids: "1906-1916", what: "字形库线 1 修复（rev 435181：2,160 字头/6,879 例，edition 995ejelvk0）后，册05–15 从 seed_admit 重落（05 base fr-rep，06–15 base fr；包 qtw<V>-l5r1）", status: "9 册 done；10/12（#1911/#1913）human_chars 没过（215/247、8/74），并入 note 轮重试"}
   - {ids: "1935-1945", what: "小注占位 note 轮：9 单 base 标签写错（字形库修复后包名指纹 a74b30→ea09d5）404 失败；10/12 成功（l5r1 人裁 247/74 绑上）", status: "partial"}
-  - {ids: "1948-1958", what: "码位第二页（codepoints 55 条、follow_ref 加 歲/歳 敎/教，中心库 rev 521737）＋小注占位：05–09、11、13–15 从 align_ref，10/12 在 note 包上从 seed_admit（包 qtw<V>-cp2）", status: "running（05 06 08 12 已完）"}
-  - {ids: "1985", what: "试点：册 12 cv 升 dev cbcd76f（#841 variants、#857、#862、#867 follow_ref_seen A24 14 对，spec params 显式开，不改书级 config），cp2 包上从 seed_admit（包 qtw12-p867）", status: running}
+  - {ids: "1948-1958", what: "码位第二页（codepoints 55 条、follow_ref 加 歲/歳 敎/教，中心库 rev 521737）＋小注占位：05–09、11、13–15 从 align_ref，10/12 在 note 包上从 seed_admit（包 qtw<V>-cp2）", status: done}  # 待审 10,567→9,173（M2 855→512、S 3,227→2,895、Z 3,470→3,107、L 2,585→2,185），报告 qtw-tools/pending-2026-11-02-cp2/
+  - {ids: "1985→2059", what: "试点：册 12 cv 升 dev cbcd76f（#841 variants、#857、#862、#867 follow_ref_seen A24 14 对，spec params 显式开，不改书级 config），cp2 包上从 seed_admit（包 qtw12-p867；#1985 因 human_chars 74→87（b1r2 人裁已进库）拦下，改 87 重交 #2059）", status: running}
   - {ids: "-", what: "下一轮合并（Ops 11-02 A30/A31/A23/A24）：cv 升版＋#862 border_detect 4 页＋seal_detect.stain_pages []＋b1r2 字形；库无格 883 格确认页（线 5 出、线 1 入库）；follow_ref_seen/variants 书级开关待 Sheldon", status: planned}
   - {ids: "-", what: "线 1 b1r2 人裁字形入库第一批 中心库 rev 525699（88 例，余 661 例待落；落完后在 cp2 包上跑 b1r2 seed_admit 一轮，04 不跑）", status: waiting}
   - {ids: "-", what: "b1r2 快审（Sheldon 11-02 审完，749 对/4 不对）事件＋锚推中心库 rev 523971（不含线 5 本地 consumed）；待线 1 glyphdb_admit 入字形库后，在 cp2 包上从 seed_admit 落一轮", status: waiting}
@@ -87,6 +87,7 @@ open_questions:
   - "pending-stats（2026-11-02 fr 后，05 为 pbfix3）：12,285（05 978→920）；follow_ref 只动了几十格。现大头 L 3,764、Z1 1,830、Z4 1,454、S1+S2 2,706、M2 924。报告 /mnt/project-files/qtw-tools/pending-2026-11-02-fr/"
   - "pending-stats（2026-11-02 05 fr-rep 后）：12,284（05 919）"
   - "pending-stats（2026-11-02 l5r1 后，10/12 仍 fr）：12,284 → 10,567；L3 1,981→1,207、L1 1,215→831、Z1 1,829→1,705、R2 452→320。报告 /mnt/project-files/qtw-tools/pending-2026-11-02-l5r1/"
+  - "pending-stats（2026-11-02 cp2：码位 55 条＋小注占位＋b1r2 前）：10,567 → 9,173（约 2.7%）；M2 855→512、S2 1,219→1,004、Z1 1,705→1,497、L3 1,207→1,052、L1 831→687、S1 1,406→1,290；P1 新出 110。报告 /mnt/project-files/qtw-tools/pending-2026-11-02-cp2/"
   - "执行方不确定：#1894（worker-7）与复跑 #1895（worker-17）同配置、同字形指纹 h1:1300:a74b30，05 待审 951 vs 919，多出 35 格都是库 unsure cov 0.92–0.94＋group_flow_abstain；疑 worker-7 环境（文意编码器/借库）不同。已告线 1 与总管"
   - "L3 试点（#1795/#1796，2026-11-01）：05 +61、06 +47 放行，新放行 127 格核对 0 错；每册约 $1.7，全书约 $420；閒→間 7 格降审要在 book_prompt 写明本书刻閒。明细 /mnt/project-files/qtw-tools/L3试点-2026-11-01.md；等 Sheldon 定铺不铺"
   - "L2 小头：#1794 时执行机缺 SikuRoBERTa（零变化）；cv #828/#829 执行机领单前自检补装，已随 L3 试点单 #1795/#1796 重交"
