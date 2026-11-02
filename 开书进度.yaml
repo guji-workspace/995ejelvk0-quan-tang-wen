@@ -36,8 +36,9 @@ jobs:
   - {ids: "1860-1862,1866-1869", what: "码位轮，并入 pbfix3 已撤", status: cancelled}
   - {ids: "1863-1865", what: "09–11 码位轮，并入 pbfix2 已撤", status: cancelled}
   - {ids: "1870-1872", what: "09–11 pbfix2，并入 pbfix3 已撤", status: cancelled}
-  - {ids: "1873-1883", what: "册05–15 从 align_ref 重跑：逐列语料 rev 411091（卷首 01a 补卷名占位列 993 处＋10 个 b 头校正 book-text #378）＋码位归一 codepoints 32 条（rev 411063）（包 qtw<V>-pbfix3）", status: "06–15 done，05 running"}
-  - {ids: "1884-1893", what: "册06–15 follow_ref 三对（獵/𤢪、妃/𡚱、賛/贊，中心库 book_defaults rev 411127）在 pbfix3 包上从 seed_admit 重落（包 qtw<V>-fr）；05 等 #1873", status: running}
+  - {ids: "1873-1883", what: "册05–15 从 align_ref 重跑：逐列语料 rev 411091（卷首 01a 补卷名占位列 993 处＋10 个 b 头校正 book-text #378）＋码位归一 codepoints 32 条（rev 411063）（包 qtw<V>-pbfix3）", status: done}
+  - {ids: "1884-1893", what: "册06–15 follow_ref 三对（獵/𤢪、妃/𡚱、賛/贊，中心库 book_defaults rev 411127）在 pbfix3 包上从 seed_admit 重落（包 qtw<V>-fr）", status: done}
+  - {ids: "1894", what: "册05 follow_ref（base qtw05-pbfix3，包 qtw05-fr）", status: running}
 review_queue:
   - id: 995ejelvk0-05-S9-1
     batch: 05r1
@@ -74,6 +75,7 @@ open_questions:
   - "pending-stats（2026-11-01 bhead 后）：12 册待审 19,644 → 13,792；S 切分／对位 8,832 → 3,998；现最大头 Z 形近字组 4,315（Z1 2,366、Z4 1,542）、L 字形库 3,705（L3 证据不足 1,950）。报告 /mnt/project-files/qtw-tools/pending-2026-11-01-bhead/"
   - "pending-stats（2026-11-01 L2 全落后）：12 册待审 13,635（05 1,014→978）；Z1 2,214、Z4 1,542、L3 1,950、S1+S2 3,300。之后由分线（字形库／切分对位／形近字组／码位异体／快审页）各自降，本线程只总览"
   - "pending-stats（2026-11-02 pbfix3 后，05 仍为旧包）：13,635 → 12,355；S 3,998→3,337（S2 1,726→1,275、S3 248→76），M2 1,145→949，Z1 2,214→1,859，Z4 1,542→1,458；L 略升（+49）"
+  - "pending-stats（2026-11-02 fr 后，05 为 pbfix3）：12,285（05 978→920）；follow_ref 只动了几十格。现大头 L 3,764、Z1 1,830、Z4 1,454、S1+S2 2,706、M2 924。报告 /mnt/project-files/qtw-tools/pending-2026-11-02-fr/"
   - "L3 试点（#1795/#1796，2026-11-01）：05 +61、06 +47 放行，新放行 127 格核对 0 错；每册约 $1.7，全书约 $420；閒→間 7 格降审要在 book_prompt 写明本书刻閒。明细 /mnt/project-files/qtw-tools/L3试点-2026-11-01.md；等 Sheldon 定铺不铺"
   - "L2 小头：#1794 时执行机缺 SikuRoBERTa（零变化）；cv #828/#829 执行机领单前自检补装，已随 L3 试点单 #1795/#1796 重交"
   - "码位对照页 https://claude.ai/artifact/SpcRmvvvcEjn5xYYGwdM6B 等用户点（33 对，含 爲/為、旣/既）"
