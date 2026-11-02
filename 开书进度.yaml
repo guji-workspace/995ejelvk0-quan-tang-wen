@@ -44,6 +44,8 @@ jobs:
   - {ids: "1906-1916", what: "字形库线 1 修复（rev 435181：2,160 字头/6,879 例，edition 995ejelvk0）后，册05–15 从 seed_admit 重落（05 base fr-rep，06–15 base fr；包 qtw<V>-l5r1）", status: "9 册 done；10/12（#1911/#1913）human_chars 没过（215/247、8/74），并入 note 轮重试"}
   - {ids: "1935-1945", what: "小注占位 note 轮：9 单 base 标签写错（字形库修复后包名指纹 a74b30→ea09d5）404 失败；10/12 成功（l5r1 人裁 247/74 绑上）", status: "partial"}
   - {ids: "1948-1958", what: "码位第二页（codepoints 55 条、follow_ref 加 歲/歳 敎/教，中心库 rev 521737）＋小注占位：05–09、11、13–15 从 align_ref，10/12 在 note 包上从 seed_admit（包 qtw<V>-cp2）", status: "running（05 06 08 12 已完）"}
+  - {ids: "1985", what: "试点：册 12 cv 升 dev cbcd76f（#841 variants、#857、#862、#867 follow_ref_seen A24 14 对，spec params 显式开，不改书级 config），cp2 包上从 seed_admit（包 qtw12-p867）", status: running}
+  - {ids: "-", what: "下一轮合并（Ops 11-02 A30/A31/A23/A24）：cv 升版＋#862 border_detect 4 页＋seal_detect.stain_pages []＋语料补全（∅322、闕→字闕 45，线 2）＋b1r2 字形；库无格 883 格确认页（线 5 出、线 1 入库）；follow_ref_seen/variants 书级开关待 Sheldon", status: planned}
   - {ids: "-", what: "线 1 b1r2 人裁字形入库第一批 中心库 rev 525699（88 例，余 661 例待落；落完后在 cp2 包上跑 b1r2 seed_admit 一轮，04 不跑）", status: waiting}
   - {ids: "-", what: "b1r2 快审（Sheldon 11-02 审完，749 对/4 不对）事件＋锚推中心库 rev 523971（不含线 5 本地 consumed）；待线 1 glyphdb_admit 入字形库后，在 cp2 包上从 seed_admit 落一轮", status: waiting}
 review_queue:
