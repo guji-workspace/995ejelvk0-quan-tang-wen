@@ -40,6 +40,7 @@ jobs:
   - {ids: "1884-1893", what: "册06–15 follow_ref 三对（獵/𤢪、妃/𡚱、賛/贊，中心库 book_defaults rev 411127）在 pbfix3 包上从 seed_admit 重落（包 qtw<V>-fr）", status: done}
   - {ids: "1894", what: "册05 follow_ref（base qtw05-pbfix3，包 qtw05-fr，worker-7）；05 待审 920→951，复跑 #1895 判为执行方结果不稳，作废", status: superseded}
   - {ids: "1895", what: "册05 follow_ref 复跑（同配置，worker-17，包 qtw05-fr-rep）：05 待审 919，作 05 现行包", status: done}
+  - {ids: "1896-1905", what: "册06–15 补审页 l5r1 人裁 1,158 格落库补锚后（线 5 推库 rev 423141）在 fr 包上从 seed_admit 重落（包 qtw<V>-l5r1）", status: running}
 review_queue:
   - id: 995ejelvk0-05-S9-1
     batch: 05r1
