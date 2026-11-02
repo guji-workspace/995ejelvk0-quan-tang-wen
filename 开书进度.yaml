@@ -41,6 +41,7 @@ jobs:
   - {ids: "1894", what: "册05 follow_ref（base qtw05-pbfix3，包 qtw05-fr，worker-7）；05 待审 920→951，复跑 #1895 判为执行方结果不稳，作废", status: superseded}
   - {ids: "1895", what: "册05 follow_ref 复跑（同配置，worker-17，包 qtw05-fr-rep）：05 待审 919，作 05 现行包", status: done}
   - {ids: "1896-1905", what: "册06–15 l5r1 重落：线 5 推库 rev 423141 时本地旧 glyph.db 被导出、覆盖了本书字形库（544 字头/1,158 例，edition v2），已撤；等线 1 修复字形库后重交", status: cancelled}
+  - {ids: "1906-1916", what: "字形库线 1 修复（rev 435181：2,160 字头/6,879 例，edition 995ejelvk0）后，册05–15 从 seed_admit 重落（05 base fr-rep，06–15 base fr；包 qtw<V>-l5r1）", status: running}
 review_queue:
   - id: 995ejelvk0-05-S9-1
     batch: 05r1
