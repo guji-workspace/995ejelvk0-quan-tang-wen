@@ -1,0 +1,27 @@
+{
+ "kind": "rerun",
+ "book": "06",
+ "cv": "ab50b235b19c559e1b9be858558c064aff5ed809",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW（全唐文 995ejelvk0）第四轮 r4：cv 钉 ab50b23（row_segment 提速 #901/#907/#909/#913/#915、#923/#925 逐字节不变；#929 border_detect 1.16 列宽均匀强约束；#930 book_knn 背景刻例，模型 config/groups/book_knn/{men,chuo,xjz}.json rev 531656；#928 用字账按书选）；中心库 rev 531650＝成片页列线：Kanripo 长行拆行＋补钉＋目录参照＋qtw_layout 88 页＋卷首藏书印 overrides；整册从 border_detect 起，base＝r3 包",
+ "output": {
+  "change": "qtw06-r4",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1"
+ },
+ "base": "cv0.6.1.dev109pgb014fb7af43d-c--g-31080e-qtw06-r3",
+ "steps": {
+  "from": "border_detect",
+  "to": null
+ },
+ "checks": {
+  "human_chars": 267
+ }
+}
