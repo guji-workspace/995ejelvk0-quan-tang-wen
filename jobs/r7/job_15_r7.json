@@ -1,0 +1,28 @@
+{
+ "kind": "rerun",
+ "book": "15",
+ "cv": "85490d89ce54f9cf1945bcdc60f61877cafe12d9",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW（全唐文 995ejelvk0）第七轮 r7：cv 钉 85490d8（0c77364 之上 #940–#947：#946 𠋫 进侯候组、#943 跳过准备签名加中心库 rev，余为缺省关的书级开关）；中心库 rev 541660＝book_knn ry/zy/guan/wm（540011）＋切分长双行小注／超长注拆分（540013）＋一字一卡人裁两波 156 条含 𠋫 59 格（540379、541145）＋目录 7 页＋正文 4 处换行（540380）＋𠋫 字头与人裁入字形库（541012、541660，2,269 字头）＋Kanripo 勘误层首批 5 处（541146）；整册从 row_segment 起，base＝r6 包",
+ "output": {
+  "change": "qtw15-r7",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1"
+ },
+ "base": "cv0.6.1.dev177pg0c7736427c41-c--g-55707a-qtw15-r6",
+ "steps": {
+  "from": "row_segment",
+  "to": null
+ },
+ "checks": {
+  "human_chars": 97
+ },
+ "cv_ref": "85490d89ce54f9cf1945bcdc60f61877cafe12d9"
+}
