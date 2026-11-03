@@ -1,0 +1,28 @@
+{
+ "kind": "rerun",
+ "book": "10",
+ "cv": "0c7736427c415917987f4d62eacbdcb424f341d6",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW（全唐文 995ejelvk0）第六轮 r6：cv 同 r5（0c77364）；中心库 rev 539983＝成片页列第三批（卷末藏书印 8 页 seal overrides＋空列表行，532018）＋book-text #388 断行 2 处（532126）＋字形线 qd0927 Sheldon 09-27 人裁重键 2,583 格（册04 1,058、册05 1,525，字形库 2,236 字头，539980）＋卷首作者行去尖括号与 6 页第 2 列表行（guji-manager #48，539982）＋目录页尾段补列 64 页（539983）；整册从 seal_detect 起，base＝r5 包",
+ "output": {
+  "change": "qtw10-r6",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1"
+ },
+ "base": "cv0.6.1.dev177pg0c7736427c41-c--g-31080e-qtw10-r5",
+ "steps": {
+  "from": "seal_detect",
+  "to": null
+ },
+ "checks": {
+  "human_chars": 426
+ },
+ "cv_ref": "0c7736427c415917987f4d62eacbdcb424f341d6"
+}
