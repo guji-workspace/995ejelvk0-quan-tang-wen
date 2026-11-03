@@ -56,6 +56,7 @@ jobs:
   - {ids: "-", what: "r5 完整（11 册）：待审 5,106 → 4,207（−18%，约 1.25%）；S 1,734→1,273，Z 1,472→1,273，M 383→304，L 1,079→1,094，R 269→197，P 160→0（碑志 A2 锚上），O 9→66（6 个卷首页第 2 列整列 D，待查）。报告 /mnt/project-files/qtw-tools/pending-2026-11-03-r5/。金标 r4 册05 1,522 格错 0。", status: done}
   - {ids: "-", what: "r6 待合：成片页列第三批 rev 532018（卷末空页藏书印 8 页 seal overrides＋空列表行，从 seal_detect）——r5 交单后才推，部分 r5 单可能已读到；字形线 qd0927 人裁 2,583 格（册04/05）等 r5 出包后推；人审页一字一卡。", status: planned}
   - {ids: "-", what: "r6 已推：成片页列 grid #388 rev 532126；字形线 qd0927 人裁 2,583 格（册04 1,058、册05 1,525）rev 539980（字形库 2,236 字头/10,211 例，指纹会变）；切分线卷首作者行去尖括号＋6 页第 2 列表行（guji-manager #48）待推。r6 册05 human_chars 要按 402+1,525 左右重估。", status: planned}
+  - {ids: "待 Ops 回单号", what: "r6：cv 0c77364，中心库 rev 539983（532018 印框＋532126 断行＋539980 qd0927 人裁＋539982 作者行＋539983 目录尾段），从 seal_detect 起，base＝r5 包，spec jobs/r6/（3c89d36）；册05 human_chars 1927。轮中各线不推。", status: running}
   - {ids: "-", what: "下一轮（r5）cv 至少钉 30291bd（含 #923 cell_shrink 再生字块按页记忆：冷缓存 glyph_match 60–85→12–20 s/页；#925 border_detect 闸省 1.5 s/页；均逐字节不变）。提速线收手。11-03 A22 通知 cv #929（0ca1392，border_detect 1.16 列宽均匀强约束，缺省 strict，刻本适用）：r5 若钉 ≥0ca1392，Step1 判过期，须从 border_detect 起跑；交单后看 col_width_out_of_band 标页数与殿本（2121 页变 33 页）比。", status: planned}
   - {ids: "-", what: "（已完成：rev 529208 全部 749 例入库，并入 r3）线 1 b1r2 人裁字形入库第一批 中心库 rev 525699（88 例，余 661 例待落；落完后在 cp2 包上跑 b1r2 seed_admit 一轮，04 不跑）", status: waiting}
   - {ids: "-", what: "b1r2 快审（Sheldon 11-02 审完，749 对/4 不对）事件＋锚推中心库 rev 523971（不含线 5 本地 consumed）；待线 1 glyphdb_admit 入字形库后，在 cp2 包上从 seed_admit 落一轮", status: waiting}
