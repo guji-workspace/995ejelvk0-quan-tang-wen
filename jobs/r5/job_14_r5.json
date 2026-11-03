@@ -1,0 +1,28 @@
+{
+ "kind": "rerun",
+ "book": "14",
+ "cv": "0c7736427c415917987f4d62eacbdcb424f341d6",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW（全唐文 995ejelvk0）第五轮 r5：cv 钉 0c77364（ab50b23 之上 #931–#939：border_detect 1.17、seal_detect 1.4 大印贴版框、SIKU-BERT 镜像文意 L2 不再弃权、#932 整理本缺字按源文本取字、#938 code_conflict 降审）；中心库 rev 532005＝成片页列第二批（Kanripo 951 列界换行挪到书影列界，qtw_layout 282 页）＋切分 B 口径（≤8 字短小注 notes/half、卷首卷名栏表行 17 页，guji-manager #46）；border_detect 版本升故整册从 border_detect 起，base＝r4 包",
+ "output": {
+  "change": "qtw14-r5",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1"
+ },
+ "base": "cv0.6.1.dev167pgab50b235b19c-c--g-31080e-qtw14-r4",
+ "steps": {
+  "from": "border_detect",
+  "to": null
+ },
+ "checks": {
+  "human_chars": 97
+ },
+ "cv_ref": "0c7736427c415917987f4d62eacbdcb424f341d6"
+}
