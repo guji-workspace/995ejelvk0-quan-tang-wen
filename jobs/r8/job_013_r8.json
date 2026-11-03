@@ -1,0 +1,28 @@
+{
+ "kind": "rerun",
+ "book": "013",
+ "cv": "b85f881a7730d7ffa8f419edecf9e9d77f4b0e91",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW（全唐文 995ejelvk0）第八轮 r8：册号迁 3 位后首轮（13→013，Sheldon 11-03 定先迁、r8 用新册名），整册从头跑、不接旧包；cv 钉 b85f881（85490d8 之上 #949 frame_line_grow、#950 提速逐位相同、#952 layout_tail_empty）；中心库＝迁移 rev（books/人裁/锚/字形库实例 id 全改 3 位）＋切分线 r8 批次：book_defaults 开 cell_shrink.frame_line_grow、关 row_segment.layout_tail_empty，qtw_layout 改 4 行加 5 行，06p100/12p186 列尾藏书印 seal override",
+ "output": {
+  "change": "qtw013-r8",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1"
+ },
+ "base": null,
+ "steps": {
+  "from": null,
+  "to": null
+ },
+ "checks": {
+  "human_chars": 146
+ },
+ "cv_ref": "b85f881a7730d7ffa8f419edecf9e9d77f4b0e91"
+}
