@@ -7,7 +7,7 @@
  "force": true,
  "ws_glob": "995ejelvk0-*",
  "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
- "why": "QTW（全唐文 995ejelvk0）第九轮 r9：按 pending_reason 计划合轮。cv 钉 9914bc7（dev：#1006 knn_infer 近邻推断事件不当人裁、#1000 码位已归一异体对坐标兜底放行、#1002 形近护栏格书级刻形近邻 near_knn；其余 #1001/#1003 缺省关、#1004/#1005/#1007–#1009 不改产物）；中心库含：H-rebind-r8 人裁补绑、语料 corpus 6（Kanripo 脱「簡」143 处＋半叶头 e011–e015）、切分 6 页 vline_overrides、near_knn.json、嚴/巖 撤出码位表、Sheldon 审完的补样本／散单／M2 三页裁决；列闸 column_gate.max_raised_hint=0（全唐文顶格首字贴版框、无真抬头，切分线 11-04：r8 约 44 列多切成 23 格）；从 border_detect 起（界行修正与新 cv 都从这步起生效）；出包后总览按 seed_admit provenance=human 核对人裁绑定",
+ "why": "QTW（全唐文 995ejelvk0）第九轮 r9：按 pending_reason 计划合轮。cv 钉 9914bc7（dev：#1006 knn_infer 近邻推断事件不当人裁、#1000 码位已归一异体对坐标兜底放行、#1002 形近护栏格书级刻形近邻 near_knn；其余 #1001/#1003 缺省关、#1004/#1005/#1007–#1009 不改产物）；中心库 rev 787192（字形指纹 h1:5073:1c1d83）含：H-rebind-r8 人裁补绑、语料 corpus 6（Kanripo 脱「簡」143 处＋半叶头 e011–e015）、切分 6 页 vline_overrides、near_knn.json、嚴/巖 撤出码位表、Sheldon 审完的补样本（H-glyph-topup-1104，146 条入字形库）／散单／M2 三页裁决、码位表 64 条；列闸 column_gate.max_raised_hint=0（全唐文顶格首字贴版框、无真抬头，切分线 11-04：r8 约 44 列多切成 23 格）；从 border_detect 起（界行修正与新 cv 都从这步起生效）；出包后总览按 seed_admit provenance=human 核对人裁绑定",
  "output": {
   "change": "qtw015-r9",
   "note": null,

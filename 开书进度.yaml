@@ -113,3 +113,4 @@ open_questions:
   - "码位对照页 https://claude.ai/artifact/SpcRmvvvcEjn5xYYGwdM6B 等用户点（33 对，含 爲/為、旣/既）"
   - "爲/為：match_margin 把 Kanripo 的 為 放行到书上 爲 的格（册05 243 格、册04 138 格），建议改回书上字形 爲（旣/既 同）；等用户定"
 next_wakeup: "2026-11-02T02:56:00Z"
+  - {ids: "待交（jobs/r9）", what: "r9：册 005–015，cv 9914bc7（dev 含 #1000 码位放行、#1002 near_knn、#1006 knn_infer 不当人裁），中心库 rev 787192（corpus 6、切分 6 页 vline_overrides、near_knn.json、码位表 64 条、H-rebind-r8、散单／M2／补样本三页人裁、字形库 10,509 例 g-1c1d83），从 border_detect 起，base=r8 包；spec params 开 seed_admit.lane_coord_codepoint_variant、column_gate.max_raised_hint=0。计划见 https://claude.ai/artifact/WAWUUkusM8zZjxVaCCGfmZ", status: running}
