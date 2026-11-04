@@ -1,0 +1,31 @@
+{
+ "kind": "rerun",
+ "book": "011",
+ "cv": "466c9239863ff8b3edc03e5415ab1e3a1c2608f1",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW（全唐文 995ejelvk0）第九轮 r9：按 pending_reason 计划合轮。cv 钉 466c923（dev：#1000 码位已归一异体对坐标兜底放行、#1002 形近护栏格书级刻形近邻 near_knn）；中心库含：H-rebind-r8 人裁补绑、语料 corpus 6（Kanripo 脱「簡」143 处＋半叶头 e011–e015）、切分 6 页 vline_overrides、near_knn.json、嚴/巖 撤出码位表、Sheldon 审完的补样本／散单／M2 三页裁决；从 border_detect 起（界行修正与新 cv 都从这步起生效）；出包后总览按 seed_admit provenance=human 核对人裁绑定",
+ "output": {
+  "change": "qtw011-r9",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1"
+ },
+ "base": "cv0.6.1.dev188pgb85f881a7730-c1-g-e1e4ea-qtw011-r8",
+ "steps": {
+  "from": "border_detect",
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "lane_coord_codepoint_variant": true
+  }
+ },
+ "checks": {},
+ "cv_ref": "466c9239863ff8b3edc03e5415ab1e3a1c2608f1"
+}
