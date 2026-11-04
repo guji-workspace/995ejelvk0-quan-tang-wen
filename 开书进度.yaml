@@ -67,6 +67,7 @@ jobs:
   - {ids: "-", what: "（已完成：rev 529208 全部 749 例入库，并入 r3）线 1 b1r2 人裁字形入库第一批 中心库 rev 525699（88 例，余 661 例待落；落完后在 cp2 包上跑 b1r2 seed_admit 一轮，04 不跑）", status: waiting}
   - {ids: "-", what: "b1r2 快审（Sheldon 11-02 审完，749 对/4 不对）事件＋锚推中心库 rev 523971（不含线 5 本地 consumed）；待线 1 glyphdb_admit 入字形库后，在 cp2 包上从 seed_admit 落一轮", status: waiting}
   - {ids: "新库 #227-#237", what: "r9：册 005–015，cv 9914bc7（dev 含 #1000 码位放行、#1002 near_knn、#1006 knn_infer 不当人裁），中心库 rev 787192（corpus 6、切分 6 页 vline_overrides、near_knn.json、码位表 64 条、H-rebind-r8、散单／M2／补样本三页人裁、字形库 10,509 例 g-1c1d83），从 border_detect 起，base=r8 包；spec params 开 seed_admit.lane_coord_codepoint_variant、column_gate.max_raised_hint=0。计划见 https://claude.ai/artifact/WAWUUkusM8zZjxVaCCGfmZ。11-04 01:30 PST 出包：坏，待审 41,383（glyph_match 候选错乱，學→覃、國→圖；字形 db_fingerprint 0462495a），不用，交字形线查根因。", status: failed}
+  - {ids: "待交（jobs/r9b）", what: "r9b：殿本 siku-zongmu 字形账本 11-03 21:08 PST 被清空（A32 本机空 glyph.db sync），A23 恢复 rev 809679 后重跑；r9 包为 base，从 glyph_match 起，cv 9914bc7，中心库 ≥809679，字形线本机核 borrowed_instances 22,002。", status: running}
 review_queue:
   - id: 995ejelvk0-05-S9-1
     batch: 05r1
