@@ -1,0 +1,32 @@
+{
+ "kind": "rerun",
+ "book": "014",
+ "cv": "02b5a6a43989f32c6397d4cd79a1503a179f0f0d",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文 r10：r9b（待审 1,980）后各线合轮。cv 钉 dev 02b5a6a（含 #1028 witness3_knn_veto、#1061 near_knn_gap、#1067 IDS 本书模板门槛、#1065 align_ref 小注全角空格、#1022 帝名列 pitch free、#1023/#1068/#1073 内框线、#1025 jiazhu_single_head、#1034 切分套书 seg_set、#1039 group_flow 缺省（本书已显式写死旧 183 组）、#1071 不调 API、#1072 ruling_glyph 参数）；中心库 ≥816490：corpus 14（勘误层＋格位表修短列/帝名列）、book_defaults 开 inner_frame_cut、码位表撤 青靑/宮宫（62 条）、IDS men/chuo/xjz 本书模板、r9b 审页四波人裁 1,010 条＋knn_infer、本书库 auto 补样本（无/死）；借殿本库照旧（去借库 A/B 未过）；从 row_segment 起（格位表、内框线、align_ref 2.7 都在其后）；spec params 试开 witness3_knn_veto、near_knn_gap，核后转书级；book_defaults 写 ruling_glyph_min_score 0.95／margin 0.02（A31 建议，终审口径）；出包后总览按 seed_admit provenance=human 核对人裁绑定",
+ "output": {
+  "change": "qtw014-r10",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1"
+ },
+ "base": "cv0.6.2.dev17pg9914bc72a8ff-c6-g-1c1d83-qtw014-r9b-a2",
+ "steps": {
+  "from": "row_segment",
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "witness3_knn_veto": true,
+   "near_knn_gap": true
+  }
+ },
+ "checks": {},
+ "cv_ref": "02b5a6a43989f32c6397d4cd79a1503a179f0f0d"
+}
