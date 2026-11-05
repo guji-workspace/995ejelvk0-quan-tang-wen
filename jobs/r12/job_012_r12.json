@@ -1,0 +1,36 @@
+{
+ "kind": "rerun",
+ "book": "012",
+ "cv": "aa874e5dd46640158efa0628a07538f11833a634",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文 r12：继续提高册 005–015（Sheldon 11-05）。cv 钉 dev aa874e5（含 #1091 source=auto 不当人裁、#1092 书级暂归一／ref_lib 坐标闸／replace_form 假边、#1090 coord_pair_no_sub）；中心库含：near_knn_gap、coord_shift_needs_pair、group_flow_provisional_to{yi_560:彝} 书级，sui 本书 IDS 模板，𢑱 刻例改标 彝，本书库 0 例字补刻例；从 glyph_match 起；spec params 试开 replace_form: lib＋replace_form_edge_exclude（码位线：宫/靑/温 照库刻形）、ref_lib_coord_dissent、align_ref.coord_pair_no_sub，核后转书级",
+ "output": {
+  "change": "qtw012-r12",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1"
+ },
+ "base": "cv0.6.5.dev7pg9949647018f8-c14-g-190152-qtw012-r11",
+ "steps": {
+  "from": "glyph_match",
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "replace_form": "lib",
+   "replace_form_edge_exclude": true,
+   "ref_lib_coord_dissent": true
+  },
+  "align_ref": {
+   "coord_pair_no_sub": true
+  }
+ },
+ "checks": {},
+ "cv_ref": "aa874e5dd46640158efa0628a07538f11833a634"
+}
