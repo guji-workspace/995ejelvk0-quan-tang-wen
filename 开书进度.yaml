@@ -70,6 +70,7 @@ jobs:
   - {ids: "新库 #238-#248", what: "r9b：殿本 siku-zongmu 字形账本 11-03 21:08 PST 被清空（A32 本机空 glyph.db sync），A23 恢复 rev 809679 后重跑；r9 包为 base，从 glyph_match 起，cv 9914bc7，中心库 ≥809679，字形线本机核 borrowed_instances 22,002。11-04 09:55 PST 完成：待审 1,980（0.58%，r8 3,433）；报告 /mnt/project-files/qtw-tools/pending-2026-11-04-r9b/；人裁 22 格同格号不再绑（重切页），交人审页线核。", status: done}
   - {ids: "新库 #461-#471", what: "r10：cv dev 02b5a6a、corpus 14、中心库 816580（审页五波、IDS 本书模板、inner_frame_cut、码位 62 条），base r9b 包、从 row_segment 起，params 开 witness3_knn_veto＋near_knn_gap。11-05 21:14 PST 完成：待审 956（约 0.28%，r9b 1,980）；人裁绑定 5,238→7,495；报告 /mnt/project-files/qtw-tools/pending-2026-11-05-r10/。", status: done}
   - {ids: "新库 #696-#706", what: "r11：首轮去借殿本库，cv dev 9949647、corpus 14、中心库 865600，base r10 包、从 column_warp 起，params near_knn_gap＋align_ref.coord_shift_needs_pair。11-05 23:35 PST 完成：待审 589（约 0.17%，r10 956）；human 通道含字形线 auto 确认 15,556 格（非人裁，待核绑定）；报告 /mnt/project-files/qtw-tools/pending-2026-11-05-r11/。", status: done}
+  - {ids: "新库 #787-#797", what: "r12：cv dev e1d84cb、corpus 15、中心库 878063（#1091 auto 不算人裁、sui 模板、彝组暂归一、0 例字补刻例），base r11 包、从 column_warp 起，params replace_form: lib＋replace_form_edge_exclude＋ref_lib_coord_dissent＋align_ref.coord_pair_no_sub。11-06 01:55 PST 完成：待审 464（约 0.14%，r11 589）；报告 /mnt/project-files/qtw-tools/pending-2026-11-05-r12/。", status: done}
 review_queue:
   - id: 995ejelvk0-05-S9-1
     batch: 05r1
