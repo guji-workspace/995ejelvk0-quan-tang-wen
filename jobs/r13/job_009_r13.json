@@ -1,0 +1,33 @@
+{
+ "kind": "rerun",
+ "book": "009",
+ "cv": "e1d84cb5e47bf876065a5968e4b178e2b39d8303",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文 r13：继续提高册 005–015。cv 钉 dev e1d84cb；中心库 ≥878219：corpus 16（012:99:1 pitch free）、书级 replace_form: lib＋edge_exclude、ref_lib_coord_dissent、coord_pair_no_sub，rr 本书 IDS 模板，字形线补 巴/匕 21、鳬/凌/閈 刻例并清 溫/眉/陰/戶 标签（878208）；从 glyph_match 起，base r12 包；spec params 开文意 L3 只读裁定库（group_flow_llm_model 中性标签 rulings、不调 API，关 vis 与二审小组），出包后形近字线 export→对话判→import，再 r13b 从 seed_admit 重放",
+ "output": {
+  "change": "qtw009-r13",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1"
+ },
+ "base": "cv0.6.5.dev15pge1d84cb5e47b-c15-g-190152-qtw009-r12",
+ "steps": {
+  "from": "glyph_match",
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": []
+  }
+ },
+ "checks": {},
+ "cv_ref": "e1d84cb5e47bf876065a5968e4b178e2b39d8303"
+}
