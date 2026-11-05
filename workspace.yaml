@@ -1,5 +1,3 @@
 # 控制台 URL 上露出来的工作区 id（`/<ws>/<book>/step/...`）。
 # 不给就退回目录名，整串中文进 URL 太长，这里固定成短 id。
 id: 995ejelvk0
-glyph_lib:
-  borrow: [siku-zongmu]
