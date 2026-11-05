@@ -69,6 +69,7 @@ jobs:
   - {ids: "新库 #227-#237", what: "r9：册 005–015，cv 9914bc7（dev 含 #1000 码位放行、#1002 near_knn、#1006 knn_infer 不当人裁），中心库 rev 787192（corpus 6、切分 6 页 vline_overrides、near_knn.json、码位表 64 条、H-rebind-r8、散单／M2／补样本三页人裁、字形库 10,509 例 g-1c1d83），从 border_detect 起，base=r8 包；spec params 开 seed_admit.lane_coord_codepoint_variant、column_gate.max_raised_hint=0。计划见 https://claude.ai/artifact/WAWUUkusM8zZjxVaCCGfmZ。11-04 01:30 PST 出包：坏，待审 41,383（glyph_match 候选错乱，學→覃、國→圖；字形 db_fingerprint 0462495a），不用，交字形线查根因。", status: failed}
   - {ids: "新库 #238-#248", what: "r9b：殿本 siku-zongmu 字形账本 11-03 21:08 PST 被清空（A32 本机空 glyph.db sync），A23 恢复 rev 809679 后重跑；r9 包为 base，从 glyph_match 起，cv 9914bc7，中心库 ≥809679，字形线本机核 borrowed_instances 22,002。11-04 09:55 PST 完成：待审 1,980（0.58%，r8 3,433）；报告 /mnt/project-files/qtw-tools/pending-2026-11-04-r9b/；人裁 22 格同格号不再绑（重切页），交人审页线核。", status: done}
   - {ids: "新库 #461-#471", what: "r10：cv dev 02b5a6a、corpus 14、中心库 816580（审页五波、IDS 本书模板、inner_frame_cut、码位 62 条），base r9b 包、从 row_segment 起，params 开 witness3_knn_veto＋near_knn_gap。11-05 21:14 PST 完成：待审 956（约 0.28%，r9b 1,980）；人裁绑定 5,238→7,495；报告 /mnt/project-files/qtw-tools/pending-2026-11-05-r10/。", status: done}
+  - {ids: "新库 #696-#706", what: "r11：首轮去借殿本库，cv dev 9949647、corpus 14、中心库 865600，base r10 包、从 column_warp 起，params near_knn_gap＋align_ref.coord_shift_needs_pair。11-05 23:35 PST 完成：待审 589（约 0.17%，r10 956）；human 通道含字形线 auto 确认 15,556 格（非人裁，待核绑定）；报告 /mnt/project-files/qtw-tools/pending-2026-11-05-r11/。", status: done}
 review_queue:
   - id: 995ejelvk0-05-S9-1
     batch: 05r1
