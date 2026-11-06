@@ -1,0 +1,33 @@
+{
+ "kind": "rerun",
+ "book": "010",
+ "cv": "0a668d99ffe6c2712424a74a65c3c4a204c07533",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文 r14（v0.1 收口轮）：切分清零后从 border_detect 整册重切；cv dev 0a668d9（含 v0.6.9 及 #1133 #1136 #1144 #1145 #1146 #1147），中心库 ≥880049（corpus 22；书级 det_warp、unet_f64、jiazhu_half_a、inner_frame_local/profile、tail_one_abs），带 r13b 审页人裁 H-r13b-1105d；rulings 三项照带，裁定库只读、不调 API",
+ "output": {
+  "change": "qtw010-r14",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1"
+ },
+ "base": "cv0.6.5.dev15pge1d84cb5e47b-c16-g-190152-qtw010-r13b",
+ "steps": {
+  "from": "border_detect",
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": []
+  }
+ },
+ "checks": {},
+ "cv_ref": "0a668d99ffe6c2712424a74a65c3c4a204c07533"
+}
