@@ -7,14 +7,15 @@
  "force": true,
  "ws_glob": "995ejelvk0-*",
  "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
- "why": "QTW 全唐文 r14（v0.1 收口轮）：切分清零后从 border_detect 整册重切；cv dev 0a668d9（含 v0.6.9 及 #1133 #1136 #1144 #1145 #1146 #1147），中心库 ≥880049（corpus 22；书级 det_warp、unet_f64、jiazhu_half_a、inner_frame_local/profile、tail_one_abs），带 r13b 审页人裁 H-r13b-1105d；rulings 三项照带，裁定库只读、不调 API",
+ "why": "QTW 全唐文 r14（v0.1 收口轮）：切分清零后从 border_detect 整册重切；cv dev 0a668d9（含 v0.6.9 及 #1133 #1136 #1144 #1145 #1146 #1147），中心库 ≥880049（corpus 22；书级 det_warp、unet_f64、jiazhu_half_a、inner_frame_local/profile、tail_one_abs），带 r13b 审页人裁 H-r13b-1105d；rulings 三项照带，裁定库只读、不调 API；env 加 GUJI_CORPUS_DRIFT=warn（cv dev 的 yh/rules.yaml 比底库 b18 多 #1106 贖還 一条，首交 #864–#874 因 CorpusDrift 全挂）",
  "output": {
   "change": "qtw012-r14",
   "note": null,
   "pack": true
  },
  "env": {
-  "GUJI_ALLOW_NO_EVENTS": "1"
+  "GUJI_ALLOW_NO_EVENTS": "1",
+  "GUJI_CORPUS_DRIFT": "warn"
  },
  "base": "cv0.6.5.dev15pge1d84cb5e47b-c16-g-190152-qtw012-r13b",
  "steps": {
