@@ -1,0 +1,34 @@
+{
+ "kind": "rerun",
+ "book": "001",
+ "cv": "b519fba8ed00bee89e0c7904fff90910f6843b1b",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文册 001 第七跑 front7：cv dev b519fba（#1296 solo_adapt＋#1297 solo_5b_same_cov 认退档前 same），中心库 ≥912198（册 yaml solo_adapt_pct p10）；base front5 包；从 seed_admit 起",
+ "output": {
+  "change": "qtw001-front7",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1",
+  "GUJI_CORPUS_DRIFT": "warn"
+ },
+ "base": "cv0.6.23.dev5pg599166dbb9f7-c29-g-356211-qtw001-front5-a2",
+ "steps": {
+  "from": "seed_admit",
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": []
+  }
+ },
+ "checks": {},
+ "cv_ref": "b519fba8ed00bee89e0c7904fff90910f6843b1b"
+}
