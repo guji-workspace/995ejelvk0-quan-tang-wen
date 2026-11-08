@@ -1,0 +1,34 @@
+{
+ "kind": "rerun",
+ "book": "003",
+ "cv": "4c2f1c572725525bf39949965eb51e8d7aaa4658",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文册 003 第四跑 front4：cv dev 4c2f1c5（含 v0.6.22＋#1292 num_run_cov），中心库 ≥910974（字形线补 001–003 高频字刻例 1,362 例 rev 910968；册 yaml num_run_cov 0.995）；base front3 包；从 glyph_match 起；solo_5b 0.98 照开；rulings 已书级",
+ "output": {
+  "change": "qtw003-front4",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1",
+  "GUJI_CORPUS_DRIFT": "warn"
+ },
+ "base": "cv0.6.22-c28-g-356211-qtw003-front3-a3",
+ "steps": {
+  "from": "glyph_match",
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": []
+  }
+ },
+ "checks": {},
+ "cv_ref": "4c2f1c572725525bf39949965eb51e8d7aaa4658"
+}
