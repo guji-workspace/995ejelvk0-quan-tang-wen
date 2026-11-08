@@ -1,13 +1,13 @@
 {
  "kind": "rerun",
  "book": "003",
- "cv": "b0f0478d4e0b355029a1c39fd810c6288388bed9",
+ "cv": "8275e635bf8dc38543d6b7d76d57c3a508afe0e3",
  "pipeline": "keben_body_v2",
  "pages": "all",
  "force": true,
  "ws_glob": "995ejelvk0-*",
  "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
- "why": "QTW 全唐文册 003 第九跑 front9：cv v0.6.24（b0f0478，含 #1301/#1302）（#1302 自适应二期 near_slack/nf_ok；#1301 职名页扁块护栏），中心库 ≥914102（corpus 32；字形线补刻例 914086；册 yaml 加二期三项）；base front8 包；从 glyph_match 起；重交：去 GUJI_ALLOW_NO_EVENTS（#1654–#1656 作废）",
+ "why": "QTW 全唐文册 003 第九跑 front9：cv v0.6.25（8275e63，含 #1301 职名页护栏、#1302 自适应二期、#1306 solo_cal 校准直放），中心库 ≥914134（corpus 32；补刻例 914086；册 yaml 开二期＋solo_cal/solo_cal_5b_cov 0.95）；base front8 包；从 glyph_match 起；作废 #1654–#1659",
  "output": {
   "change": "qtw003-front9",
   "note": null,
@@ -29,5 +29,5 @@
   }
  },
  "checks": {},
- "cv_ref": "b0f0478d4e0b355029a1c39fd810c6288388bed9"
+ "cv_ref": "8275e635bf8dc38543d6b7d76d57c3a508afe0e3"
 }
