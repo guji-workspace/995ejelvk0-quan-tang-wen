@@ -1,0 +1,33 @@
+{
+ "kind": "rerun",
+ "book": "003",
+ "cv": "e3691c48a78008980ef86498ff978ae5b8dd7038",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文册 003 首跑重交（#1227 因 003.yaml 抄 006 的 layout_prior、qtw_layout 无 003 行，row_segment 全页失败；rev 887011 改 layout_prior: \"\"）：cv dev e3691c4，中心库 ≥887011（corpus 26），整册从头；总目三不带参校本",
+ "output": {
+  "change": "qtw003-front1b",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1",
+  "GUJI_CORPUS_DRIFT": "warn"
+ },
+ "steps": {
+  "from": null,
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": []
+  }
+ },
+ "checks": {},
+ "cv_ref": "e3691c48a78008980ef86498ff978ae5b8dd7038"
+}
