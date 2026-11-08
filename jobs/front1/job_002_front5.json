@@ -1,0 +1,34 @@
+{
+ "kind": "rerun",
+ "book": "002",
+ "cv": "599166dbb9f75e10114fa8a4a4de477b1e1b509d",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文册 002 第五跑 front5：cv dev 599166d（#1293 num_run_juan_cov／solo_5b_same_cov），中心库 ≥911592（corpus 29 001 韻編 50 列 cuts；册 yaml num_run_juan_cov 0.95、solo_5b_same_cov 0.95，Sheldon 11-08 定）；base front4 包；从 seed_admit 起",
+ "output": {
+  "change": "qtw002-front5",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1",
+  "GUJI_CORPUS_DRIFT": "warn"
+ },
+ "base": "cv0.6.23.dev4pg4c2f1c572725-c28-g-356211-qtw002-front4",
+ "steps": {
+  "from": "seed_admit",
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": []
+  }
+ },
+ "checks": {},
+ "cv_ref": "599166dbb9f75e10114fa8a4a4de477b1e1b509d"
+}
