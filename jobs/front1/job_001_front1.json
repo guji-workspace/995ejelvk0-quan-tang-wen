@@ -1,0 +1,33 @@
+{
+ "kind": "rerun",
+ "book": "001",
+ "cv": "af80b48e45aa5f65273913dfa5027c2c2c3171a0",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文册 001 首跑（Sheldon 11-07 定 001–004 先单独跑，后面多次调整）：cv dev af80b48（seed_admit 1.76），中心库 ≥886748（corpus 26；001/002 册配置 886651、003 页钉 886645／印框 886647、fold_coord_ref 886748）；001 跳 p1–34 序表；总目、姓氏韵编不带参校本；rulings 三项照带，裁定库只读、不调 API",
+ "output": {
+  "change": "qtw001-front1",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1",
+  "GUJI_CORPUS_DRIFT": "warn"
+ },
+ "steps": {
+  "from": null,
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": []
+  }
+ },
+ "checks": {},
+ "cv_ref": "af80b48e45aa5f65273913dfa5027c2c2c3171a0"
+}
