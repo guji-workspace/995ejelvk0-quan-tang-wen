@@ -1,0 +1,34 @@
+{
+ "kind": "rerun",
+ "book": "001",
+ "cv": "3b474d0f46307981f24cf164c8b7c147dbd9a9a6",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文册 001 第八跑 front8：cv dev 3b474d0（#1300 数字串降档／高危对放宽／非组弃权格；#1299 职名页双行分栏），中心库 ≥912355（corpus 30；册 yaml 加 num_run_cov_5b 0.97 等四项）；base front7 包；从 row_segment 起",
+ "output": {
+  "change": "qtw001-front8",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1",
+  "GUJI_CORPUS_DRIFT": "warn"
+ },
+ "base": "cv0.6.24.dev3pgb519fba8ed00-c29-g-356211-qtw001-front7-a2",
+ "steps": {
+  "from": "row_segment",
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": []
+  }
+ },
+ "checks": {},
+ "cv_ref": "3b474d0f46307981f24cf164c8b7c147dbd9a9a6"
+}
