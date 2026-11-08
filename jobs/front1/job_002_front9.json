@@ -1,20 +1,19 @@
 {
  "kind": "rerun",
  "book": "002",
- "cv": "6abb2b8d7d73d3f2322dee812bed49e18aef818b",
+ "cv": "b0f0478d4e0b355029a1c39fd810c6288388bed9",
  "pipeline": "keben_body_v2",
  "pages": "all",
  "force": true,
  "ws_glob": "995ejelvk0-*",
  "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
- "why": "QTW 全唐文册 002 第九跑 front9：cv dev 6abb2b8（#1302 自适应二期 near_slack/nf_ok；#1301 职名页扁块护栏），中心库 ≥914102（corpus 32；字形线补刻例 914086；册 yaml 加二期三项）；base front8 包；从 glyph_match 起",
+ "why": "QTW 全唐文册 002 第九跑 front9：cv v0.6.24（b0f0478，含 #1301/#1302）（#1302 自适应二期 near_slack/nf_ok；#1301 职名页扁块护栏），中心库 ≥914102（corpus 32；字形线补刻例 914086；册 yaml 加二期三项）；base front8 包；从 glyph_match 起；重交：去 GUJI_ALLOW_NO_EVENTS（#1654–#1656 作废）",
  "output": {
   "change": "qtw002-front9",
   "note": null,
   "pack": true
  },
  "env": {
-  "GUJI_ALLOW_NO_EVENTS": "1",
   "GUJI_CORPUS_DRIFT": "warn"
  },
  "base": "cv0.6.24.dev6pg3b474d0f4630-c30-g-356211-qtw002-front8",
@@ -30,5 +29,5 @@
   }
  },
  "checks": {},
- "cv_ref": "6abb2b8d7d73d3f2322dee812bed49e18aef818b"
+ "cv_ref": "b0f0478d4e0b355029a1c39fd810c6288388bed9"
 }
