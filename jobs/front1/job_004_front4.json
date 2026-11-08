@@ -1,0 +1,34 @@
+{
+ "kind": "rerun",
+ "book": "004",
+ "cv": "b519fba8ed00bee89e0c7904fff90910f6843b1b",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文册 004 v0.1 收口跑 front4：cv dev b519fba，中心库 ≥912276（004 卷首卷名栏 4 行＋帝名列 pitch free 6 行 corpus 30、004.yaml p19 vline_overrides、p5/p109 藏书印）；base front3 包；从 border_detect 起；rulings 三项照带",
+ "output": {
+  "change": "qtw004-front4",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1",
+  "GUJI_CORPUS_DRIFT": "warn"
+ },
+ "base": "cv0.6.22-c28-g-356211-qtw004-front3-a2",
+ "steps": {
+  "from": "border_detect",
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": []
+  }
+ },
+ "checks": {},
+ "cv_ref": "b519fba8ed00bee89e0c7904fff90910f6843b1b"
+}
