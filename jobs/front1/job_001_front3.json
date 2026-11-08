@@ -1,0 +1,34 @@
+{
+ "kind": "rerun",
+ "book": "001",
+ "cv": "80b152027acc3f70c9ca94f7f2a030296ce94523",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文册 001 第三跑 front3：cv v0.6.22（80b1520，含 #1279 参校本属性 B 块），中心库 ≥900419，corpus 28；base front2 包；从 align_ref 起（切分不动）；match_solo_5b 开（册 yaml solo_5b_cov 0.98，Sheldon 11-08 定）；rulings 三项照带",
+ "output": {
+  "change": "qtw001-front3",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1",
+  "GUJI_CORPUS_DRIFT": "warn"
+ },
+ "base": "cv0.6.19.dev12pgc005c877ab5b-c28-g-356211-qtw001-front2",
+ "steps": {
+  "from": "align_ref",
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": []
+  }
+ },
+ "checks": {},
+ "cv_ref": "80b152027acc3f70c9ca94f7f2a030296ce94523"
+}
