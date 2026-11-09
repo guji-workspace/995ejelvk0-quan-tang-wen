@@ -1,0 +1,33 @@
+{
+ "kind": "rerun",
+ "book": "003",
+ "cv": "d42e895e17506949bf5ef2b51cbddd9592b20e7b",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文册 003 合轮 c35（切分层，Sheldon 11-09 四层迭代第一层）：cv v0.6.31（d42e895，书级代码 k1）；中心库 ≥926739（corpus 35 切分线 001–003 格位表/人定格线/印框，book_defaults code: 1）；base cv0.6.30-c33-g-356211-qtw003-front10；整册从 border_detect 起；GUJI-749",
+ "output": {
+  "change": "qtw003-c35",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_CORPUS_DRIFT": "warn"
+ },
+ "base": "cv0.6.30-c33-g-356211-qtw003-front10",
+ "steps": {
+  "from": "border_detect",
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": []
+  }
+ },
+ "checks": {},
+ "cv_ref": "d42e895e17506949bf5ef2b51cbddd9592b20e7b"
+}
