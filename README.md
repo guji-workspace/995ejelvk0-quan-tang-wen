@@ -21,6 +21,7 @@
 |---|---|---|
 | `data_full/<册>/` | 原图 `<页>.png`，R2 取 | 不进 |
 | `products/`、`output/`、`cache/` | 产物、派生库 | 不进 |
+| `code/` | 本书书级代码（Step3 行切分分叉：row_boundaries、jiazhu_split），版本 `k<N>`，见 `code/README.md` | 进 |
 
 ## 仓的来历
 
