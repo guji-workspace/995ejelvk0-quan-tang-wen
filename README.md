@@ -29,3 +29,7 @@
 `open-guji/guji-workspace` 的 `995ejelvk0-欽定全唐文清嘉慶二十一年揚州刻本內府本/` 搬来，内容不变。
 册配置、字形库、人裁、参校语料在中心库（工作区 id `995ejelvk0`（书 ID；2026-10-30 由短 id `qtw` 改来）），搬仓不动它们：`guji db pull -w <本仓根>`。
 字形库借库 `glyph_lib.borrow: [siku-zongmu]` 指的是中心库里的字形库，不是 git 仓；旧仓 `siku-zongmu-workspace` 已归档。
+
+书级代码打 tag（`code/` 出新版 k<N> 后）：本地 `git tag k<N> <提交> && git push origin k<N>`；云端会话走 ai-team 中转站
+`python3 process/tag.py guji-workspace/<本仓> <40 位提交号> k<N> "说明"`（只认 main 上的提交）。别改 `code/` 下已发版的文件来记这些说明——
+`code/` 里任何文件变了，钉了 `code: N` 的册起跑前就会报和 k<N> 不符。
