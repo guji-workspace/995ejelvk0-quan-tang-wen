@@ -1,0 +1,33 @@
+{
+ "kind": "rerun",
+ "book": "001",
+ "cv": "ca2614e25f7d5d4c5efbb0340f43637891a603bc",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文册 001 合轮 c44（001–015，Sheldon 只有手机期间收机器余量）：cv v0.7.4（ca2614e）；中心库 ≥946835（corpus 46、H-c42 人裁入库、solo_5b 005–015、形近裁定 945986）；base cv0.7.3-c43-g-9e3fe8-k3-qtw001-c43；从 row_segment 起；GUJI-749",
+ "output": {
+  "change": "qtw001-c44",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_CORPUS_DRIFT": "warn"
+ },
+ "base": "cv0.7.3-c43-g-9e3fe8-k3-qtw001-c43",
+ "steps": {
+  "from": "row_segment",
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": []
+  }
+ },
+ "checks": {},
+ "cv_ref": "ca2614e25f7d5d4c5efbb0340f43637891a603bc"
+}
