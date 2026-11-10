@@ -1,0 +1,33 @@
+{
+ "kind": "rerun",
+ "book": "020",
+ "cv": "519870ee8c993ace302608059afaa4ddf03f7b3a",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文册 020 首跑摸底（Sheldon 11-10 卡点开 016–030）：cv v0.7.5（519870e）；中心库 ≥968835（020 印框）（016–030 开工配置：page_map strict、印框、seed_admit 册级开关含 solo_5b 0.98）；整册从头；GUJI-749",
+ "output": {
+  "change": "qtw020-f1",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1",
+  "GUJI_CORPUS_DRIFT": "warn"
+ },
+ "steps": {
+  "from": null,
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": []
+  }
+ },
+ "checks": {},
+ "cv_ref": "519870ee8c993ace302608059afaa4ddf03f7b3a"
+}
