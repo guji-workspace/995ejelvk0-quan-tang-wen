@@ -1,0 +1,33 @@
+{
+ "kind": "rerun",
+ "book": "001",
+ "cv": "538b77ab26fc64e015aa0f9e882d59332e219a64",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文册 001 合轮 c43（001–004 收算法余量、定 v0.1 前）：cv v0.7.3（538b77a）；中心库 ≥945807（c40 第二层补例 19、c41 粗笔补例 25 等、形近裁定 945265/945470、簡码位 001–003 恒等）；base cv0.7.3-c42-g-9e3fe8-k3-qtw001-c40；从 glyph_match 起；GUJI-749",
+ "output": {
+  "change": "qtw001-c43",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_CORPUS_DRIFT": "warn"
+ },
+ "base": "cv0.7.3-c42-g-9e3fe8-k3-qtw001-c40",
+ "steps": {
+  "from": "glyph_match",
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": []
+  }
+ },
+ "checks": {},
+ "cv_ref": "538b77ab26fc64e015aa0f9e882d59332e219a64"
+}
