@@ -6,5 +6,3 @@ cv: ">=0.6.31"          # 要 cv 带书级代码（core/book_code.py）
 overrides:
   keben.row_boundaries: row_boundaries
   keben.jiazhu_split: jiazhu_split
-  keben.roster_segment: roster_segment   # 2026-11-09 切分线：职名页逐列人定字框（page_ref_lines／_manual_column），表外的列与殿本缺省逐字节相同
-  keben.roster_glyph: roster_glyph       # 随 roster_segment 一起拷（它相对 import 本模块），未改
