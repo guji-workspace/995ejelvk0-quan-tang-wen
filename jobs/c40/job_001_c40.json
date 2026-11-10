@@ -1,0 +1,33 @@
+{
+ "kind": "rerun",
+ "book": "001",
+ "cv": "538b77ab26fc64e015aa0f9e882d59332e219a64",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文册 001 合轮 c40：cv v0.7.3（538b77a，含 #1388），配 guji-manager ≥v0.4.38；中心库 ≥944244（corpus 42 切分线 4 列、c39 清理页 61 格入库 944238、形近字裁定 943677、001–003 yaml 开 group_flow_pair_shape_nm_5b／solo_cal_5b_canon）；base cv0.6.38-c41-g-f85995-k3-qtw001-c39-a2；整册从 row_segment 起；GUJI-749",
+ "output": {
+  "change": "qtw001-c40",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_CORPUS_DRIFT": "warn"
+ },
+ "base": "cv0.6.38-c41-g-f85995-k3-qtw001-c39-a2",
+ "steps": {
+  "from": "row_segment",
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": []
+  }
+ },
+ "checks": {},
+ "cv_ref": "538b77ab26fc64e015aa0f9e882d59332e219a64"
+}
