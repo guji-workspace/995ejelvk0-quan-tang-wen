@@ -1,0 +1,33 @@
+{
+ "kind": "rerun",
+ "book": "006",
+ "cv": "538b77ab26fc64e015aa0f9e882d59332e219a64",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文册 006 合轮 c41（005–015 按四层迭代重摸底）：cv v0.7.3（538b77a），配 guji-manager ≥v0.4.38；中心库最新（本书库去借库后补刻例、corpus 42、各线 r16 后修改）；base cv0.6.17-c25-g-3465d4-qtw006-r16-a4（★main）；整册从 border_detect 起；GUJI-749",
+ "output": {
+  "change": "qtw006-c41",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_CORPUS_DRIFT": "warn"
+ },
+ "base": "cv0.6.17-c25-g-3465d4-qtw006-r16-a4",
+ "steps": {
+  "from": "border_detect",
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": []
+  }
+ },
+ "checks": {},
+ "cv_ref": "538b77ab26fc64e015aa0f9e882d59332e219a64"
+}
