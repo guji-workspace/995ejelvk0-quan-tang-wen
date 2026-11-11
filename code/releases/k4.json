@@ -1,0 +1,18 @@
+{
+ "digest": "79787203fd92662283150143d17b3932b4bcf8d90f4f8c98392024845fd1c70a",
+ "files": {
+  "README.md": "420d1a95cdb8f0871f80397759c8aabf4ef667765fd6f4da0dc8774812d1061a",
+  "code.yaml": "60f4521196c5a7a55fc03887134a6cdc3ada412ae6590eacb61cbbd131d556f8",
+  "equiv.yaml": "a7243a2904a065b01ed36ca695a5a74146340a8248ad4f5c8091e6b6eb8366f2",
+  "jiazhu_split.py": "537320db27b015e857233b706a4f33f774dcf8dbc09a83881af4038e2518c640",
+  "row_boundaries.py": "88d10ecce5415a2d569c4eee2337bad3c786d8dc620363e8e54fbf53c0911639",
+  "samples.yaml": "7e8e01db30988c6ea5b1f462ee5618de29203f92eb69a2072bf3278420698d5b",
+  "tests/conftest.py": "b94e077db06eea736dd6ac2828b5e8fe0787cfc5cf17f23c9dccf79e0a738ef7",
+  "tests/test_quantangwen_half_a.py": "4f8d2f4148e5e5df3a228cb755fc0811dc171f87b71172139fd02142fb10c593",
+  "tests/test_quantangwen_short_rephase.py": "47c42700b594249148586896e015ab89dd73f01aecf7bb1580c4da975219ac04",
+  "tests/test_quantangwen_single_head.py": "e034fd710d29352a4b170a564940ef235389bb14da835e54768bf4e549a59966"
+ },
+ "k": 4,
+ "note": "节末短列等距格网按字段重定相位（rephase_short_grid）；020 整册 1,566 列动 28 列，看图全对",
+ "tested_cv": "0.6.39.dev62+g88ad56295356"
+}
