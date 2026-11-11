@@ -1,0 +1,34 @@
+{
+ "kind": "rerun",
+ "book": "028",
+ "cv": "88ad56295356169072cb8016443bb61176da309c",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文册 028 合轮 f4（016–030 第四遍）：cv v0.7.7（88ad562）；书级代码 k4（节末短列格网重定相位）；中心库 ≥971050（corpus 50 切分 cuts、corpus 51 勘误 g009–g013 造字换真字；字形线 f2/f3 补例 970876/971039；形近字线 f3 裁定 970881）；base f3 包，从 row_segment 起；GUJI-749",
+ "output": {
+  "change": "qtw028-f4",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1",
+  "GUJI_CORPUS_DRIFT": "warn"
+ },
+ "steps": {
+  "from": "row_segment",
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": []
+  }
+ },
+ "checks": {},
+ "cv_ref": "88ad56295356169072cb8016443bb61176da309c",
+ "base": "cv0.7.7-c49-g-9f3d37-k3-qtw028-f3"
+}
