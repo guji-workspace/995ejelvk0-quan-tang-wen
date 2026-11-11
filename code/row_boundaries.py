@@ -1229,6 +1229,69 @@ SNAP_FRAC = 0.2
 SNAP_DIST_W = 1.0
 
 
+#: 短列重定相位（`rephase_short_grid`）：列里只有一段字、不超过这么多格高时才管
+SHORT_BLOCK_MAX = 5.5
+#: 字段之间空过这么多格高就算段断开（下面再有墨就不是「只有一段」）
+SHORT_BLOCK_GAP = 1.5
+#: 一行墨超过内容宽的这个比例才算有墨（滤掉纸面噪点）
+SHORT_INK_FRAC = 0.04
+#: 相位最多挪这么多格高
+SHORT_SHIFT_MAX = 0.75
+#: 字段里的格线合计压墨不到内容宽的这么多倍，算没切进字（格线擦着笔尖不算）
+SHORT_CUT_INK = 0.3
+
+
+def rephase_short_grid(row_proj: np.ndarray, bounds: Sequence[float], period: float, dst_w: int) -> list[float]:
+    """节末短列（只剩一到五个字、下面整列空）的等距格网重定相位，全唐文书级（切分线 2026-11-11 f3）。
+
+    等距格网的相位逐列按全列墨投影的傅里叶分量定（`impl/keben/row_grid`）。整列只有一两个字时分量很弱，
+    相位被纸面噪点带偏，格网整体压低半格到一格，首字被拦腰切（020:28:1「烈」、030:120:1「奏」、
+    020:140:4「子宜體予意」等 9 列，f3 待审第一层）。这里只看这一段字：在 ±0.75 格内找一个整体平移，
+    让落在字段里的格线压的墨最少、首字不落到首条格线之上；原格网已经不压墨就原样返回（长列、正常列逐字节不变）。"""
+    b = [float(y) for y in bounds]
+    h = len(row_proj)
+    if h == 0 or period <= 0 or len(b) < 2:
+        return b
+    sm = np.convolve(row_proj, np.ones(5) / 5.0, mode="same")
+    ink = sm > max(2.0, SHORT_INK_FRAC * dst_w)
+    ys = np.flatnonzero(ink[12:]) + 12          # 顶上十来行常是版框线
+    ys = ys[ys < h - 0.3 * period]               # 列底常带一截下版框线
+    if len(ys) == 0:
+        return b
+    top = int(ys[0])
+    bot = top
+    for y in ys:
+        if y - bot > SHORT_BLOCK_GAP * period:
+            return b                                # 下面还有墨：不是只有一段字的短列
+        bot = int(y)
+    if bot - top > SHORT_BLOCK_MAX * period:
+        return b
+    lo, hi = top - 0.3 * period, bot + 0.3 * period
+
+    def cost(d: float) -> float:
+        c = 0.0
+        for y in b:
+            yy = y + d
+            if lo <= yy <= hi:
+                c += float(sm[int(min(max(round(yy), 0), h - 1))])
+        return c
+
+    base = cost(0.0)
+    if b[0] <= top and base <= SHORT_CUT_INK * dst_w:
+        return b                                    # 原格网没切进字里：不动
+    best_d, best_c = 0.0, base if b[0] <= top else float("inf")
+    r = int(SHORT_SHIFT_MAX * period)
+    for d in sorted(range(-r, r + 1), key=abs):
+        if b[0] + d > top or b[0] + d < -0.5 * period:
+            continue
+        c = cost(float(d))
+        if c < best_c:
+            best_d, best_c = float(d), c
+    if best_d == 0.0 or (b[0] <= top and best_c > 0.5 * base):
+        return b
+    return [y + best_d for y in b]
+
+
 def snap_to_gaps(row_proj: np.ndarray, bounds: Sequence[float], period: float) -> list[float]:
     """等距格网（`impl/keben/row_grid`）的格线各自就近挪进字缝，格数、格号不变。刻本字常伸出名义格，
     直线格线会擦掉字头字脚；挪的范围 ±0.2 格，相邻两条之间至少还隔 0.6 格，不会交叉。
@@ -1833,7 +1896,8 @@ def segment_column(col_gray: np.ndarray, period: float, n_body_slots: int = 21,
     if grid_bounds is not None:
         if len(grid_bounds) != n_slots + 1:
             raise ValueError(f"grid_bounds 要 {n_slots + 1} 条格线，给了 {len(grid_bounds)}")
-        result = RowBoundaryResult(boundaries=snap_to_gaps(row_proj, grid_bounds, period),
+        result = RowBoundaryResult(boundaries=snap_to_gaps(row_proj, rephase_short_grid(row_proj, grid_bounds, period, dst_w),
+                                                           period),
                                    blank_intervals=[], valleys=[], period=period)
     else:
         result = fit_row_boundaries(row_proj, dst_w, border_top, border_bottom, period,
