@@ -1,0 +1,33 @@
+{
+ "kind": "rerun",
+ "book": "020",
+ "cv": "b86917aa923f925dcd720f5da3d6bb7537049f19",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文册 020 f2 重交：#1977 配页 strict 卡住（corpus 47 里 p3 错钉 0067-01b），切分线 corpus 48 按卷全册逐页钉 174 页；cv v0.7.6（b86917a）；中心库 ≥970299（corpus 48）；整册从头；GUJI-749",
+ "output": {
+  "change": "qtw020-f2b",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1",
+  "GUJI_CORPUS_DRIFT": "warn"
+ },
+ "steps": {
+  "from": null,
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": []
+  }
+ },
+ "checks": {},
+ "cv_ref": "b86917aa923f925dcd720f5da3d6bb7537049f19"
+}
