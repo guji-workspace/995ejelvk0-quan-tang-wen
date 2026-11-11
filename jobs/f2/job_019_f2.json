@@ -1,0 +1,33 @@
+{
+ "kind": "rerun",
+ "book": "019",
+ "cv": "b86917aa923f925dcd720f5da3d6bb7537049f19",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文册 019 合轮 f2（016–030 第二遍，清第一层）：cv v0.7.6（b86917a）；中心库 ≥970088（corpus 47：正文页钉＋目录页参照 QTW_TOC、印列表空 overrides、028 重钉卷99–102；字形线第二层补例 969748）；首跑失败（配页），整册从头；GUJI-749",
+ "output": {
+  "change": "qtw019-f2",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1",
+  "GUJI_CORPUS_DRIFT": "warn"
+ },
+ "steps": {
+  "from": null,
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": []
+  }
+ },
+ "checks": {},
+ "cv_ref": "b86917aa923f925dcd720f5da3d6bb7537049f19"
+}
