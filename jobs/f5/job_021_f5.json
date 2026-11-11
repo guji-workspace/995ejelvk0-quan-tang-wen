@@ -1,0 +1,34 @@
+{
+ "kind": "rerun",
+ "book": "021",
+ "cv": "91ebf36501081a59c8675b23ad9f09df279ae021",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文册 021 合轮 f5（016–030 第五遍）：cv v0.7.8（91ebf36，#1418）；中心库 ≥971390（册级 consensus_lib_cov 0.97、疏→䟽 码位表＋字形库改标、corpus 52、字形线 f4 补例 971211/971263）；base f4 包，从 glyph_match 起；GUJI-749",
+ "output": {
+  "change": "qtw021-f5",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1",
+  "GUJI_CORPUS_DRIFT": "warn"
+ },
+ "steps": {
+  "from": "glyph_match",
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": []
+  }
+ },
+ "checks": {},
+ "cv_ref": "91ebf36501081a59c8675b23ad9f09df279ae021",
+ "base": "cv0.7.7-c51-g-9f3d37-k4-qtw021-f4"
+}
