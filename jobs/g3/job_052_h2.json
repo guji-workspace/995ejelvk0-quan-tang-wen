@@ -1,0 +1,34 @@
+{
+ "kind": "rerun",
+ "book": "052",
+ "cv": "d3d90540af761b5f464d6f81f198c1b13995132d",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文册 052 合轮 h2（031–060）：cv v0.7.10（d3d9054）；中心库 ≥975213（corpus 56：hline_hints、目录页 QTW_TOC、058 卷238 钉；字形线补例；形近字线 h1/g2 裁定）；base cv0.7.10-c54-g-9f3d37-k4-qtw052-h1，从 border_detect 起；GUJI-749",
+ "output": {
+  "change": "qtw052-h2",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1",
+  "GUJI_CORPUS_DRIFT": "warn"
+ },
+ "steps": {
+  "from": "border_detect",
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": []
+  }
+ },
+ "checks": {},
+ "cv_ref": "d3d90540af761b5f464d6f81f198c1b13995132d",
+ "base": "cv0.7.10-c54-g-9f3d37-k4-qtw052-h1"
+}
