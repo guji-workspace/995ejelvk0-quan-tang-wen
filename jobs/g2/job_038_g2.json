@@ -1,0 +1,34 @@
+{
+ "kind": "rerun",
+ "book": "038",
+ "cv": "d3d90540af761b5f464d6f81f198c1b13995132d",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文册 038 合轮 g2（031–045 第二遍）：cv v0.7.10（d3d9054）；中心库 ≥972852（切分线 g1fix：碑誌闕字夾注页 reference_profile text、漏探界行 vline_overrides；形近字线 g1 裁定 972802）；base g1 包，从 seed_admit 起；GUJI-749",
+ "output": {
+  "change": "qtw038-g2",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1",
+  "GUJI_CORPUS_DRIFT": "warn"
+ },
+ "steps": {
+  "from": "seed_admit",
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": []
+  }
+ },
+ "checks": {},
+ "cv_ref": "d3d90540af761b5f464d6f81f198c1b13995132d",
+ "base": "cv0.7.10-c53-g-9f3d37-k4-qtw038-g1-a3"
+}
