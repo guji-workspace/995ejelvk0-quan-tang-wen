@@ -1,0 +1,50 @@
+{
+ "kind": "command",
+ "book": "059",
+ "cv": "ec3e7e1f6f62389d729e41fd2c9ecac5af65cb3e",
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文册 059 切分体检（只读，不出包）：取最新包 cv0.7.10-c57-g-9f3d37-k4-qtw059-h3，暖缓存后跑 guji seg check --job；Sheldon 11-12 要整书看切分错误分布；GUJI-749",
+ "env": {
+  "GUJI_CORPUS_DRIFT": "warn",
+  "GUJI_CODE_DRIFT": "warn"
+ },
+ "run": [
+  [
+   "products",
+   "pack",
+   "fetch",
+   "{book}",
+   "--label",
+   "cv0.7.10-c57-g-9f3d37-k4-qtw059-h3",
+   "--force",
+   "-w",
+   "{ws}"
+  ],
+  [
+   "cache",
+   "warm",
+   "--book",
+   "{book}",
+   "--jobs",
+   "4",
+   "-w",
+   "{ws}"
+  ],
+  [
+   "seg",
+   "check",
+   "{book}",
+   "-w",
+   "{ws}",
+   "--job",
+   "--out",
+   "seg-check/{book}"
+  ]
+ ],
+ "output": {
+  "change": null,
+  "note": null,
+  "pack": false
+ }
+}
