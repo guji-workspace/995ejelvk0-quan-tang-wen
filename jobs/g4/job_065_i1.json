@@ -1,0 +1,33 @@
+{
+ "kind": "rerun",
+ "book": "065",
+ "cv": "d3d90540af761b5f464d6f81f198c1b13995132d",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文册 065 首跑 i1（061–075 批）：中心库 ≥975433（corpus 57：15 册 yaml、全册逐页钉 2,452 页、闕字页 text、061 重装页与 074 卷首人改、勘误 e028）；整册从头；cv v0.7.10（d3d9054）；GUJI-749",
+ "output": {
+  "change": "qtw065-i1",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1",
+  "GUJI_CORPUS_DRIFT": "warn"
+ },
+ "steps": {
+  "from": null,
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": []
+  }
+ },
+ "checks": {},
+ "cv_ref": "d3d90540af761b5f464d6f81f198c1b13995132d"
+}

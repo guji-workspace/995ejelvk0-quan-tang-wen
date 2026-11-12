@@ -1,0 +1,34 @@
+{
+ "kind": "rerun",
+ "book": "048",
+ "cv": "d3d90540af761b5f464d6f81f198c1b13995132d",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文册 048 合轮 h3（031–075 批）：中心库 ≥975433（corpus 57：046 張鷟判目录页 QTW_TOC、054 彈曰页 text；形近字线 g3 裁定 84）；base cv0.7.10-c56-g-9f3d37-k4-qtw048-h2-a3，从 glyph_match 起；cv v0.7.10（d3d9054）；GUJI-749",
+ "output": {
+  "change": "qtw048-h3",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1",
+  "GUJI_CORPUS_DRIFT": "warn"
+ },
+ "steps": {
+  "from": "glyph_match",
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": []
+  }
+ },
+ "checks": {},
+ "cv_ref": "d3d90540af761b5f464d6f81f198c1b13995132d",
+ "base": "cv0.7.10-c56-g-9f3d37-k4-qtw048-h2-a3"
+}
