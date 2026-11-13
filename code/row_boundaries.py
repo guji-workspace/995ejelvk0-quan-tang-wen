@@ -2033,6 +2033,11 @@ def segment_column(col_gray: np.ndarray, period: float, n_body_slots: int = 21,
         for pos in main_pos:
             runs.pop(pos, None)
             tail_a.discard(pos)
+        # 中段没有一列空白的格不是并排两字，是左右结构的整字（勳勞勝射…），从段里摘掉按整格出
+        # （Sheldon 11-13 人审：单字被切成左右小注）。段尾收编的右半单字（tail_a）不查。
+        for pos in [q for q in runs if q not in tail_a]:
+            if not jiazhu_split.has_mid_gap(patches[pos], ink_threshold):
+                runs.pop(pos, None)
         # 表说只有一半有字的夹注格：并进段（缝取段的中位数），发格时只发墨多的一半
         if half_notes and runs:
             cx_mid = float(np.median(list(runs.values())))

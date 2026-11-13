@@ -227,6 +227,12 @@ COLUMN_FRAC_T = 0.25       # 整列判据：非空白格里有这个比例以上
 # 缝不求准——取墨迹跨度中段 35~65% 里**墨量最少的那条谷**（并列取最靠中心的一段的中点），
 # 没有空谷就是笔画最少的那一列；两半墨量不够 `HALF_MIN_INK` 的半边由调用方照旧不发格子。
 FORCED_BAND = (0.35, 0.65)
+#: 强制拆的缝列最多容这么多墨点（扫描噪点）；再多就是笔画连着，不拆（Sheldon 11-13 人审：单字被切成左右小注）
+FORCED_GAP_MAX_INK = 1
+#: 量缝时扔掉的框线行：横向开运算后这一行的横线墨合计 ≥ 墨跨度的 GAP_LINE_W（上下各带 2 行）。只会让「有缝」更容易成立（照旧拆），不会多合
+GAP_LINE_W = 0.5
+GAP_LINE_SEG = 0.08    # 横向开运算的核长（占墨跨度）：框线断成几截、斜一两像素也认得出
+GAP_LINE_EDGE = 0.2    # 框线只在格的上下各 20% 里找
 
 
 def forced_split_center(patch: np.ndarray, ink_threshold: int = INK_THRESHOLD) -> float | None:
@@ -243,11 +249,44 @@ def forced_split_center(patch: np.ndarray, ink_threshold: int = INK_THRESHOLD) -
     lo = x0 + int(span * FORCED_BAND[0])
     hi = x0 + int(np.ceil(span * FORCED_BAND[1]))
     seg = xp[lo:hi + 1]
+    if not has_mid_gap(patch, ink_threshold, FORCED_BAND):
+        return None     # 中段没有一列空白：是左右结构的整字（勳勞勝…），不是并排两字，表说小注也不拆
     idx = np.flatnonzero(seg == seg.min()) + lo
     groups = np.split(idx, np.flatnonzero(np.diff(idx) > 1) + 1)
     mid = (x0 + x1) / 2.0
     best = min(groups, key=lambda g: abs((g[0] + g[-1]) / 2.0 - mid))
     return float(best[0] + best[-1] + 1) / 2.0
+
+
+def has_mid_gap(patch: np.ndarray, ink_threshold: int = INK_THRESHOLD,
+                band: tuple[float, float] = (0.30, 0.70)) -> bool:
+    """墨的横向跨度中间 `band` 里有没有一列墨不超过 FORCED_GAP_MAX_INK（真夹注两字之间总有缝）。
+    墨太少量不出时当有缝（不改原判）。"""
+    binary = _binary(patch, ink_threshold).copy()
+    if binary.sum() < 80:
+        return True
+    # 横贯大半格宽的横线（列末下版框线，常断成几截、略斜）不算：它把缝盖住了（列末「四其」「司如」）
+    xp0 = binary.sum(axis=0)
+    ink0 = np.flatnonzero(xp0 > 0)
+    if len(ink0) < 10:
+        return True
+    w0 = int(ink0[-1]) - int(ink0[0]) + 1
+    k = max(9, int(GAP_LINE_SEG * w0))
+    horiz = cv2.morphologyEx(binary, cv2.MORPH_OPEN, cv2.getStructuringElement(cv2.MORPH_RECT, (k, 1)))
+    h = binary.shape[0]
+    rows = np.flatnonzero(horiz.sum(axis=1) >= GAP_LINE_W * w0)
+    rows = rows[(rows < GAP_LINE_EDGE * h) | (rows >= (1 - GAP_LINE_EDGE) * h)]   # 只认格的上下边带，字中间的长横画不动
+    for y in rows:
+        binary[max(0, y - 2):y + 3] = 0
+    xp = binary.sum(axis=0)
+    ink = np.flatnonzero(xp > 0)
+    if len(ink) < 10:
+        return True
+    x0, x1 = int(ink[0]), int(ink[-1])
+    span = x1 - x0 + 1
+    lo = x0 + int(span * band[0])
+    hi = x0 + int(np.ceil(span * band[1]))
+    return bool(xp[lo:hi + 1].min() <= FORCED_GAP_MAX_INK)
 
 
 def column_frac(patches: dict[int, np.ndarray], ref_w: float | None = None,
