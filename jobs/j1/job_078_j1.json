@@ -1,0 +1,33 @@
+{
+ "kind": "rerun",
+ "book": "078",
+ "cv": "d3d90540af761b5f464d6f81f198c1b13995132d",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文册 078 首跑 j1（076–090 批）：中心库 ≥979336（corpus 64：076–090 开工包 逐页钉、闕字页 text、封面页 cover、勘误 e029–e031；g5 层1 夹注格位覆盖）；整册从头；cv v0.7.10（d3d9054）；GUJI-749",
+ "output": {
+  "change": "qtw078-j1",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1",
+  "GUJI_CORPUS_DRIFT": "warn"
+ },
+ "steps": {
+  "from": null,
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": []
+  }
+ },
+ "checks": {},
+ "cv_ref": "d3d90540af761b5f464d6f81f198c1b13995132d"
+}
