@@ -1,0 +1,19 @@
+{
+ "digest": "9e9499ee93174a67c136bfee0081e24d3d6c64280e6947214b82332fbae3c4f4",
+ "files": {
+  "README.md": "420d1a95cdb8f0871f80397759c8aabf4ef667765fd6f4da0dc8774812d1061a",
+  "code.yaml": "60f4521196c5a7a55fc03887134a6cdc3ada412ae6590eacb61cbbd131d556f8",
+  "equiv.yaml": "a7243a2904a065b01ed36ca695a5a74146340a8248ad4f5c8091e6b6eb8366f2",
+  "jiazhu_split.py": "3f10a04177cae5e9fb8b2a006a50effddfdc601cabeb93520b0d759aa8279a6f",
+  "row_boundaries.py": "a922c790b5dc43860f783a1565b4ba1aeafc9629160fbcf1d406458aaa102e49",
+  "samples.yaml": "7e8e01db30988c6ea5b1f462ee5618de29203f92eb69a2072bf3278420698d5b",
+  "tests/conftest.py": "b94e077db06eea736dd6ac2828b5e8fe0787cfc5cf17f23c9dccf79e0a738ef7",
+  "tests/test_quantangwen_half_a.py": "4f8d2f4148e5e5df3a228cb755fc0811dc171f87b71172139fd02142fb10c593",
+  "tests/test_quantangwen_iso_row.py": "4f693ade7887a5fe2388fffff07f0b7cb31ce4257fd87810031951deced494cf",
+  "tests/test_quantangwen_short_rephase.py": "47c42700b594249148586896e015ab89dd73f01aecf7bb1580c4da975219ac04",
+  "tests/test_quantangwen_single_head.py": "f3160f4150386d53c63d857c1af95cbbfadbee57347cf3c843c391e7a6eb58b1"
+ },
+ "k": 5,
+ "note": "",
+ "tested_cv": "0.7.17.dev11+gec3e7e1f6f62"
+}
