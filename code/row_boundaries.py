@@ -2023,7 +2023,7 @@ def segment_column(col_gray: np.ndarray, period: float, n_body_slots: int = 21,
         # 只是护栏，不改 link_runs 自己认下的段；Step1 切对之后这道闸自然不触发。
         if jiazhu_single_head and not _mid_rule_line(col_ink):
             runs.update(jiazhu_split.single_row_heads(entries, runs, patches, eligible=nonblank,
-                                                      ink_threshold=ink_threshold))
+                                                      ink_threshold=ink_threshold, ruler=ruler))
         if not _mid_rule_line(col_ink):
             runs, tail_a = jiazhu_split.adopt_run_tails(
                 runs, patches, eligible=nonblank, ink_threshold=ink_threshold)
