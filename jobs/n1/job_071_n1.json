@@ -1,0 +1,34 @@
+{
+ "kind": "rerun",
+ "book": "071",
+ "cv": "7ded9153396186f067a0c59ba8223f1f30a623cb",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文册 071 合轮 n1（031–090）：中心库 ≥996899（corpus 68＝书库 v67＋底库 b24；字形线 m1 加厚＋人裁 531 条；wu 嗚/鳴 字组；stroke_veto 只留 千/干；形近字 m2L3 17 条）；base cv0.7.24-c66-g-9f3d37-k6-qtw071-m2，从 row_segment 起；cv v0.7.31（7ded915）；GUJI-749",
+ "output": {
+  "change": "qtw071-n1",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1",
+  "GUJI_CORPUS_DRIFT": "warn"
+ },
+ "steps": {
+  "from": "row_segment",
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": []
+  }
+ },
+ "checks": {},
+ "cv_ref": "7ded9153396186f067a0c59ba8223f1f30a623cb",
+ "base": "cv0.7.24-c66-g-9f3d37-k6-qtw071-m2"
+}
