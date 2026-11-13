@@ -1,0 +1,34 @@
+{
+ "kind": "rerun",
+ "book": "088",
+ "cv": "d3d90540af761b5f464d6f81f198c1b13995132d",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文册 088 合轮 m1（031–090）：中心库 ≥991751（书级代码 k5 正文页孤立夹注按中缝拆、corpus 65 夹注格位覆盖 202 列；字形库 +3,411 例含 㴱 宐 与 j1 笔势；形近字线 g5L3/j1L3/j2L3 裁定）；base cv0.7.10-c65-g-9f3d37-k4-qtw088-j2，从 row_segment 起；cv v0.7.10（d3d9054）；GUJI-749",
+ "output": {
+  "change": "qtw088-m1",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1",
+  "GUJI_CORPUS_DRIFT": "warn"
+ },
+ "steps": {
+  "from": "row_segment",
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": []
+  }
+ },
+ "checks": {},
+ "cv_ref": "d3d90540af761b5f464d6f81f198c1b13995132d",
+ "base": "cv0.7.10-c65-g-9f3d37-k4-qtw088-j2"
+}
