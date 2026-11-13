@@ -1,0 +1,33 @@
+{
+ "kind": "rerun",
+ "book": "118",
+ "cv": "7ded9153396186f067a0c59ba8223f1f30a623cb",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文册 118 首跑 p1（106–120 批）：中心库 ≥998429（corpus 69：106–120 逐页钉 2349 页、text 101 页、cover 10；底库 b24；书级代码 k6；wu 嗚/鳴；stroke_veto 已关）；整册从头；cv v0.7.31（7ded915）；GUJI-749",
+ "output": {
+  "change": "qtw118-p1",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1",
+  "GUJI_CORPUS_DRIFT": "warn"
+ },
+ "steps": {
+  "from": null,
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": []
+  }
+ },
+ "checks": {},
+ "cv_ref": "7ded9153396186f067a0c59ba8223f1f30a623cb"
+}
