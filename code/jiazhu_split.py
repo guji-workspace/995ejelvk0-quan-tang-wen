@@ -425,7 +425,7 @@ def suspect_full_width_cells(runs: dict[int, float], patches: dict[int, np.ndarr
 
 def single_row_heads(entries: list[tuple[int, tuple[float, float] | None]], runs: dict[int, float],
                      patches: dict[int, np.ndarray], eligible: set[int] | None = None,
-                     ink_threshold: int = INK_THRESHOLD) -> dict[int, float]:
+                     ink_threshold: int = INK_THRESHOLD, ruler: float | None = None) -> dict[int, float]:
     """一行就完的雙行小注段头（`segment_column` 的 `jiazhu_single_head`，2026-11-04 全唐文）：
 
     「闕一字」这类三字小注排成两行：头一行「字｜闕」两字并排，第二行只有右半一个「一」。`link_runs` 要
@@ -450,7 +450,127 @@ def single_row_heads(entries: list[tuple[int, tuple[float, float] | None]], runs
         if xs.size < TAIL_MIN_INK or float((xs >= cxi).mean()) < TAIL_A_FRAC:
             continue
         out[i] = cx
+    # 孤立一行的夹注（2026-11-13）：碑誌正文页列首、列尾、列中只一行的「闕｜一」「其｜三」，前后没有能连段的行。
+    # 量得出缝（strength ≥`CC_MIN`）且缝够宽（`_iso_wide_gap`），或宽缝并排两字（`_pair_wide_gap`，左半只一两横、
+    # 墨量比过不了 `gap_center` 的也算；量出缝而 strength 不够的是噪点，不收）→ 记成段（只一行）。两条都卡「一侧只是一根竖笔」（`_thin_stroke_side`）：
+    # 「川」三竖分开、缝也宽（039:65:8:1）。
+    for i in sorted(patches):
+        if i in runs or i in out or (eligible is not None and i not in eligible):
+            continue
+        m = measured.get(i)
+        if m is not None and m[1] >= CC_MIN and _iso_wide_gap(patches[i], m[0], ink_threshold) \
+                and not _thin_stroke_side(patches[i], m[0], ink_threshold):
+            out[i] = m[0]
+        elif (m is None or m[1] >= CC_MIN) and (cxp := _pair_wide_gap(patches[i], ruler, ink_threshold)) is not None:
+            out[i] = cxp
     return out
+
+
+def _pair_wide_gap(patch: np.ndarray, ruler: float | None,
+                   ink_threshold: int = INK_THRESHOLD) -> float | None:
+    """宽中缝并排两字（不看两侧墨量比）：跨度 ≥`SPAN_T`×尺、缝落在跨度 30–70%、缝宽 ≥`ISO_GAP_FRAC`×格框宽、
+    两侧各 ≥`ISO_SIDE_MIN_INK` 墨、各自宽 ≤`MASS_W`×跨度 → 缝中心；否则 None。"""
+    binary = _strip_rule_rows(_binary(patch, ink_threshold))
+    xp = binary.sum(axis=0)
+    w = xp.shape[0]
+    ink = np.flatnonzero(xp > 0)
+    if ink.size < 10:
+        return None
+    x0, x1 = int(ink[0]), int(ink[-1])
+    span = x1 - x0 + 1
+    if span / float(ruler or w) < SPAN_T:
+        return None
+    best = None
+    a = None
+    for x in range(x0, x1 + 2):
+        z = x <= x1 and xp[x] == 0
+        if z and a is None:
+            a = x
+        elif not z and a is not None:
+            if a - x0 > 0.30 * span and x - x0 < 0.70 * span and (best is None or x - a > best[1] - best[0]):
+                best = (a, x)
+            a = None
+    if best is None or best[1] - best[0] < ISO_GAP_FRAC * w:
+        return None
+    left, right = binary[:, x0:best[0]], binary[:, best[1]:x1 + 1]
+    if min(int(left.sum()), int(right.sum())) < ISO_SIDE_MIN_INK:
+        return None
+    if max(left.shape[1], right.shape[1]) > MASS_W * span:
+        return None
+    cx = float(best[0] + best[1]) / 2
+    if _thin_stroke_side(patch, cx, ink_threshold):
+        return None
+    return cx
+
+
+def _thin_stroke_side(patch: np.ndarray, cx: float, ink_threshold: int = INK_THRESHOLD) -> bool:
+    """缝 `cx` 某一侧的墨只是一根竖笔：墨框宽 < `THIN_SIDE_W`×格框宽、高 > `THIN_SIDE_H`×格高（「川」的「丿」）。
+    并排小注每侧是一整个小字，「一」「二」又扁又宽，都不会这样。"""
+    binary = _strip_rule_rows(_binary(patch, ink_threshold))
+    h, w = binary.shape
+    c = int(round(cx))
+    for side in (binary[:, :c], binary[:, c:]):
+        if side.size == 0 or not side.any():
+            continue
+        n, _lab, stats, _cen = cv2.connectedComponentsWithStats(np.ascontiguousarray(side), 8)
+        keep = [k for k in range(1, n) if stats[k, 4] >= THIN_SIDE_SPECK * side.sum()]   # 去散点、纸渣
+        if not keep:
+            continue
+        x0 = min(stats[k, 0] for k in keep)
+        x1 = max(stats[k, 0] + stats[k, 2] for k in keep)
+        y0 = min(stats[k, 1] for k in keep)
+        y1 = max(stats[k, 1] + stats[k, 3] for k in keep)
+        if (x1 - x0) < THIN_SIDE_W * w and (y1 - y0) > THIN_SIDE_H * h:
+            return True
+    return False
+
+
+#: 孤立一行的雙行小注（2026-11-13 全唐文 g5 层 1，切分线）：碑誌正文页（reference_profile text）列首、列尾、列中
+#: 只有一行的「闕｜一」「其｜三」两字并排，`link_runs` 要连两行、`single_row_heads` 原判据要下一格是右半单字尾，
+#: 都落空，两字挤成一个整宽格（g5 正文页宽格 341 个，列尾 96、列首／列中孤立 201）。单格 `gap_center` 会被左右
+#: 结构正文字骗（039 抽 12 页：量得出缝的正文字 27 个，隱刑邪知比謝張後州如…），但它们的中缝窄：缝宽／格框宽
+#: 正文字最大 0.033，小注对 0.049 起（中位约 0.09）。缝宽 ≥ `ISO_GAP_FRAC` 才认这一行是段（只一行）。
+ISO_GAP_FRAC = 0.042
+THIN_SIDE_W = 0.15          # 一侧墨框宽 < 此 × 格框宽、
+THIN_SIDE_H = 0.6           # 高 > 此 × 格高 → 只是一根竖笔
+THIN_SIDE_SPECK = 0.05      # 量墨框时不算面积 < 此 × 该侧墨的连通体（散点）
+RULE_ROW_FRAC = 0.5         # 一行墨 ≥ 此 × 格框宽算框线行
+RULE_EDGE = 0.2             # 只在格上下各这么高的带里找框线行
+RULE_ROW_PAD = 6           # 框线行上下连带抹掉的行数（px）
+ISO_SIDE_MIN_INK = 40     # 宽缝并排两字每侧墨下限（px），「一」一横约 150–300
+
+
+def _strip_rule_rows(binary: np.ndarray) -> np.ndarray:
+    """抹掉横贯格框的行（列尾下版框线、列首上框条：一行墨 ≥`RULE_ROW_FRAC`×格框宽），不让它把中缝填死
+    （039:82:6:22「二｜闕」）。框线是断的、略斜，不要求连成一段；只看格的上下 `RULE_EDGE` 带，
+    格中间并排两字各一横加起来过半宽的行不抹，免得抹出假缝。"""
+    h = binary.shape[0]
+    edge = RULE_EDGE * h
+    rows = [r for r in np.flatnonzero(binary.sum(axis=1) >= RULE_ROW_FRAC * binary.shape[1])
+            if r < edge or r >= h - edge]
+    if not rows:
+        return binary
+    out = binary.copy()
+    for r in rows:   # 框线常是斜的、粗细不匀：连上下各 RULE_ROW_PAD 行一起抹
+        out[max(0, r - RULE_ROW_PAD):r + RULE_ROW_PAD + 1] = 0
+    return out
+
+
+def _iso_wide_gap(patch: np.ndarray | None, cx: float, ink_threshold: int = INK_THRESHOLD) -> bool:
+    """`cx` 那条缝（列投影全零的一段）够宽：≥ `ISO_GAP_FRAC` × 格框宽。"""
+    if patch is None:
+        return False
+    xp = _strip_rule_rows(_binary(patch, ink_threshold)).sum(axis=0)
+    w = xp.shape[0]
+    c = int(round(cx))
+    if c <= 0 or c >= w - 1 or xp[c] != 0:
+        return False
+    a = z = c
+    while a > 0 and xp[a - 1] == 0:
+        a -= 1
+    while z < w - 1 and xp[z + 1] == 0:
+        z += 1
+    return (z - a + 1) >= ISO_GAP_FRAC * w
 
 
 def adopt_run_tails(runs: dict[int, float], patches: dict[int, np.ndarray],
