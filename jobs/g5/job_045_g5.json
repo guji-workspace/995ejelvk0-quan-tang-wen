@@ -1,0 +1,34 @@
+{
+ "kind": "rerun",
+ "book": "045",
+ "cv": "d3d90540af761b5f464d6f81f198c1b13995132d",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文册 045 合轮 g5（031–075 切分优先轮）：中心库 ≥979161（corpus 62：体检列首横条 hline_hints 20 册、047 版心条、031–060 卷前目录 QTW_TOC 29 页、夹注格位表 187 列、061–075 目录 QTW_TOC、件末印页 cover 39 页；形近字线 g4L3 裁定 278）；base cv0.7.10-c57-g-9f3d37-k4-qtw045-g4-a2，从 row_segment 起；cv v0.7.10（d3d9054）；GUJI-749",
+ "output": {
+  "change": "qtw045-g5",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1",
+  "GUJI_CORPUS_DRIFT": "warn"
+ },
+ "steps": {
+  "from": "row_segment",
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": []
+  }
+ },
+ "checks": {},
+ "cv_ref": "d3d90540af761b5f464d6f81f198c1b13995132d",
+ "base": "cv0.7.10-c57-g-9f3d37-k4-qtw045-g4-a2"
+}
