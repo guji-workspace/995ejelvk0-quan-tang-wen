@@ -1,0 +1,20 @@
+{
+ "digest": "8d82ef5e453425e14c415c5df3d12d201e4ce7e041df605282e21d06e04416c8",
+ "files": {
+  "README.md": "420d1a95cdb8f0871f80397759c8aabf4ef667765fd6f4da0dc8774812d1061a",
+  "code.yaml": "60f4521196c5a7a55fc03887134a6cdc3ada412ae6590eacb61cbbd131d556f8",
+  "equiv.yaml": "a7243a2904a065b01ed36ca695a5a74146340a8248ad4f5c8091e6b6eb8366f2",
+  "jiazhu_split.py": "7fc5f16f0f363c6513f13d06e7a0806a6e041a370cf7eb89d44754f8c1756238",
+  "row_boundaries.py": "1f176b6ce182e9c44a65ccb338072187473f3d4a6e22dfddf6ad3567efcc5c6d",
+  "samples.yaml": "7e8e01db30988c6ea5b1f462ee5618de29203f92eb69a2072bf3278420698d5b",
+  "tests/conftest.py": "b94e077db06eea736dd6ac2828b5e8fe0787cfc5cf17f23c9dccf79e0a738ef7",
+  "tests/test_quantangwen_half_a.py": "4f8d2f4148e5e5df3a228cb755fc0811dc171f87b71172139fd02142fb10c593",
+  "tests/test_quantangwen_iso_row.py": "4f693ade7887a5fe2388fffff07f0b7cb31ce4257fd87810031951deced494cf",
+  "tests/test_quantangwen_mid_gap.py": "98213ab68c32b2646ad32e35f9d9d5b2b7fb9136492a3952b1e87b35f9c50061",
+  "tests/test_quantangwen_short_rephase.py": "47c42700b594249148586896e015ab89dd73f01aecf7bb1580c4da975219ac04",
+  "tests/test_quantangwen_single_head.py": "f3160f4150386d53c63d857c1af95cbbfadbee57347cf3c843c391e7a6eb58b1"
+ },
+ "k": 6,
+ "note": "k6：中间没有空白列的格不拆成左右小注（Sheldon 11-13 人审单字被切成左右小注）；本机 10 页 A/B 合回 14 格全对",
+ "tested_cv": "0.7.10"
+}
