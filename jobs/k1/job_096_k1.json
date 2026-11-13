@@ -1,0 +1,33 @@
+{
+ "kind": "rerun",
+ "book": "096",
+ "cv": "fcb5240bb415fd1f37d0d5768156c8cf20464a85",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文册 096 首跑 k1（091–105 批）：中心库 ≥992971（corpus 66：091–105 逐页钉 2600 页、text 59 页、cover 14；书级代码 k6；stroke_veto）；整册从头；cv v0.7.24（fcb5240）；GUJI-749",
+ "output": {
+  "change": "qtw096-k1",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1",
+  "GUJI_CORPUS_DRIFT": "warn"
+ },
+ "steps": {
+  "from": null,
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": []
+  }
+ },
+ "checks": {},
+ "cv_ref": "fcb5240bb415fd1f37d0d5768156c8cf20464a85"
+}

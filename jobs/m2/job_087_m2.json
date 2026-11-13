@@ -1,0 +1,34 @@
+{
+ "kind": "rerun",
+ "book": "087",
+ "cv": "fcb5240bb415fd1f37d0d5768156c8cf20464a85",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文册 087 合轮 m2（031–090）：中心库 ≥992971（书级代码 k6 无缝不拆左右小注；stroke_veto 笔画反向护栏；形近字线 m1L3 裁定 67；人裁 531 条；corpus 66）；base cv0.7.10-c65-g-9f3d37-k5-qtw087-m1-a3，从 row_segment 起；cv v0.7.24（fcb5240）；GUJI-749",
+ "output": {
+  "change": "qtw087-m2",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1",
+  "GUJI_CORPUS_DRIFT": "warn"
+ },
+ "steps": {
+  "from": "row_segment",
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": []
+  }
+ },
+ "checks": {},
+ "cv_ref": "fcb5240bb415fd1f37d0d5768156c8cf20464a85",
+ "base": "cv0.7.10-c65-g-9f3d37-k5-qtw087-m1-a3"
+}
