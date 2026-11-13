@@ -1,0 +1,34 @@
+{
+ "kind": "rerun",
+ "book": "086",
+ "cv": "d3d90540af761b5f464d6f81f198c1b13995132d",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文册 086 合轮 j2（076–090 切分轮）：中心库 ≥979745（corpus 65：目录页 QTW_TOC 168 页、hline_hints 889 页、夹注格位覆盖 43 列、㴱 勘误 96 处 e032–e127；形近字线 j1L3 裁定 285）；base cv0.7.10-c64-g-9f3d37-k4-qtw086-j1，从 border_detect 起；cv v0.7.10（d3d9054）；GUJI-749",
+ "output": {
+  "change": "qtw086-j2",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1",
+  "GUJI_CORPUS_DRIFT": "warn"
+ },
+ "steps": {
+  "from": "border_detect",
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": []
+  }
+ },
+ "checks": {},
+ "cv_ref": "d3d90540af761b5f464d6f81f198c1b13995132d",
+ "base": "cv0.7.10-c64-g-9f3d37-k4-qtw086-j1"
+}
