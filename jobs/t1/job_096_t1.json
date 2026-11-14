@@ -1,0 +1,34 @@
+{
+ "kind": "rerun",
+ "book": "096",
+ "cv": "d2226dcdabd4e6b7e95d7a5f1836f299f4512e24",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文册 096 合轮 t1（031–120）：中心库 ≥1004726（k8＝row_hooks＋R018 空列首格粗条记空，code: 8；wu_shape 嗚鳴刻形；corpus 71 列首粗条 hints 8 页）；base cv0.7.35-c70-g-b4081c-k7-qtw096-s1，从 row_segment 起；cv v0.7.36（d2226dc）；GUJI-749",
+ "output": {
+  "change": "qtw096-t1",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1",
+  "GUJI_CORPUS_DRIFT": "warn"
+ },
+ "steps": {
+  "from": "row_segment",
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": []
+  }
+ },
+ "checks": {},
+ "cv_ref": "d2226dcdabd4e6b7e95d7a5f1836f299f4512e24",
+ "base": "cv0.7.35-c70-g-b4081c-k7-qtw096-s1"
+}
