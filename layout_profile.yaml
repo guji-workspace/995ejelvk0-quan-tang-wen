@@ -1,0 +1,18 @@
+# 全唐文（嘉慶內府刻本）版式档案：只写事实，不写开关（A22 2026-11-13 格式，ai-team c3cf30f）。
+# 放在书仓根目录，不进 code/，所以不算进 k 号。
+layout_profile:
+  script: 刻本
+  grid: uniform               # 半叶 9 列；逐列格位表由 Kanripo 逐页钉生成，个别列 pitch free
+  slots_per_col: 22
+  snap_range: 0.2             # cv 缺省，未开 snap_cut
+  margin: {top: 无, bottom: 无}   # 上框是粗条加细线两道，细线在粗条下 18–55px；个别页贴着粗条或没有，靠 hline_hints
+  head_raise: false           # 顶格首字、版框顶线会被误当抬头
+  jiazhu:
+    rows: sync                # 右行先排；奇数时左行末格空（jiazhu_half_a）；「闕N字」一行就完也算雙行段
+    uneven_count: false
+    mid_gap: always           # 两行之间总有白缝，没缝的格是左右结构整字，不拆（k6）
+  header_col: {detect: ref_position, where: 卷端首列}   # 「欽定全唐文卷N」＋作者行；卷前目录页另建 QTW_TOC 段
+  seals: [件首页下半網点印2到3方, 件末空白页单印]          # 件首网点印用模板认不出，人定框；件末印页是 cover
+  col_end_frame: solid        # 列首列尾字常挂着内框细线，粗框带毛边
+  page_kinds: [body]          # 参校本页属性另有 text（闕字、判注密）、none、cover
+  overhang_strokes: few

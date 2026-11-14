@@ -1,0 +1,23 @@
+# 全唐文书级代码的参数缺省（cv core/seg_set.seg_set_params 读，层级：Step 缺省 < 本文件 < 中心库 book_defaults < 册 yaml）。
+# 2026-11-13 切分线（A22 切分开关收敛 P1）：原写在中心库 config/book_defaults.yaml 的单书切分开关搬来，值不变，
+# 各条来历照抄原注释；inner_frame_cut、inner_frame_profile 是 cv 缺省（true），删掉不搬。
+params:
+  cell_shrink:
+    # 2026-11-03 切分线：列端粗框线连毛边剥掉（cv #949；Sheldon 标 27 格里 9 格框线，A/B 册06/11 放行 0 改字）
+    frame_line_grow: true
+    # 2026-11-05 解决已知切分问题线（S4）：内框细线逐段贴线、线厚上限随格高放大，配整宽行墨找断续内线（cv #1144 21c32f4）
+    inner_frame_local: true
+    # 2026-11-05 切分线（S1b）：列端单横「一」按绝对量放行，不再被列端渣格闸当框渣记空（cv #1145 b148b2c）
+    tail_one_abs: true
+    # 2026-11-06 解决已知切分问题线（S6）：实心墨团格记空（cv #1161 cbb1917）
+    ink_blob_empty: true
+  row_segment:
+    # 2026-11-03 切分线：表没出行的页末列不当整列空、照无表切（cv #952）
+    layout_tail_empty: false
+    # 2026-11-04 切分线：「闕一字」类小注一行就完也认成雙行段（cv #1025 cc7c6f2）
+    jiazhu_single_head: true
+    # 2026-11-05 切分线（S3）：格位表 half 的格整字发右半（cv #1133 32a6786）
+    jiazhu_half_a: true
+  column_gate:
+    # 2026-11-04 切分线：全唐文没有抬头，列闸不认抬头（r9b 23 格列 40→7）
+    max_raised_hint: 0
