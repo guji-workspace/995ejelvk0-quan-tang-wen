@@ -1,0 +1,34 @@
+{
+ "kind": "rerun",
+ "book": "008",
+ "cv": "64bb2935ba83f1477483d76ca5ea51fd7cb57fa2",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "实验（A23 5a 相似度 CNN 三册 A/B，臂 A＝现行），不标 main、不推库；册 008，base c44，glyph_match→seed_admit；cv v0.7.35；材料 ai-team domain/CV/字形领域/5a相似度算法-2026-11-09/交全唐文-三册AB-2026-11-13.md",
+ "output": {
+  "change": "qtw008-ab5aA",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1",
+  "GUJI_CORPUS_DRIFT": "warn"
+ },
+ "steps": {
+  "from": "glyph_match",
+  "to": "seed_admit"
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": []
+  }
+ },
+ "checks": {},
+ "cv_ref": "64bb2935ba83f1477483d76ca5ea51fd7cb57fa2",
+ "base": "cv0.7.4-c46-g-1da1a9-k3-qtw008-c44"
+}
