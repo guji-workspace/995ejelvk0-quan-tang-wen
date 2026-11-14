@@ -1,0 +1,34 @@
+{
+ "kind": "rerun",
+ "book": "072",
+ "cv": "704d10eebb56bf838aae54b40e5e6992e9cc4e1a",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文册 072 合轮 u1（031–120）：中心库 ≥1004776（s1L3 裁定 2,086 条：己已巳两路同字 2,080）；cv v0.7.37（wu_shape 只判库首位，#1548）；base cv0.7.36-c71-g-b4081c-k8-qtw072-t1，从 seed_admit 起；k8；GUJI-749",
+ "output": {
+  "change": "qtw072-u1",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1",
+  "GUJI_CORPUS_DRIFT": "warn"
+ },
+ "steps": {
+  "from": "seed_admit",
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": []
+  }
+ },
+ "checks": {},
+ "cv_ref": "704d10eebb56bf838aae54b40e5e6992e9cc4e1a",
+ "base": "cv0.7.36-c71-g-b4081c-k8-qtw072-t1"
+}
