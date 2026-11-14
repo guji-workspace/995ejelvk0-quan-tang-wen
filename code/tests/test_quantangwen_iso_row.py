@@ -1,7 +1,7 @@
 """jiazhu_split.single_row_heads：孤立一行的雙行小注（全唐文正文页「闕｜一」，2026-11-13 g5 层 1）。"""
 import numpy as np
 
-from guji_book.quantangwen import jiazhu_split as J
+from guji_book.quantangwen import row_hooks as J
 
 W = 100
 

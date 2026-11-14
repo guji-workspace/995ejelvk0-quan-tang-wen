@@ -1,8 +1,8 @@
 """row_boundaries._half_a_left：只有右半有字的夹注格，跨缝的字整字发右半（jiazhu_half_a，全唐文 S3，2026-11-05）。"""
 import numpy as np
 
-from guji_book.quantangwen import jiazhu_split as J
-from guji_book.quantangwen import row_boundaries as RB
+from guji_book.quantangwen import row_hooks as J
+from guji_book.quantangwen import row_hooks as RB
 
 
 def _blank(w: int = 60, h: int = 60) -> np.ndarray:

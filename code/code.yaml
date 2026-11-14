@@ -2,7 +2,6 @@
 # 改了本目录的代码：本仓提交 → guji code release -w <本仓根> 出 releases/k<N+1>.json → 打 tag k<N+1>。
 name: quantangwen            # ＝册配置的 seg_set
 base: keben
-cv: ">=0.6.31"          # 要 cv 带书级代码（core/book_code.py）
-overrides:
-  keben.row_boundaries: row_boundaries
-  keben.jiazhu_split: jiazhu_split
+cv: ">=0.7.36"           # k8 要 cv row_hooks 带 jiazhu_pair_ok、jiazhu_heads 传 ruler（#1534）与 edge_frame_only（#1541），v0.7.36 起有
+overrides:                 # k8 起（2026-11-13）：row_boundaries／jiazhu_split 两份整文件 fork 撤掉，差异挂成钩子
+  keben.row_hooks: row_hooks

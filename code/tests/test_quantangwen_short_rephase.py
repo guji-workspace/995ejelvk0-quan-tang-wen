@@ -1,7 +1,7 @@
 """row_boundaries.rephase_short_grid：节末短列的等距格网按字段重定相位（全唐文 f3，切分线 2026-11-11）。"""
 import numpy as np
 
-from guji_book.quantangwen import row_boundaries as RB
+from guji_book.quantangwen import row_hooks as RB
 
 P = 200.0
 

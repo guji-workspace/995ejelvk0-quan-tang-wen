@@ -1,7 +1,7 @@
 """jiazhu_split.has_mid_gap：中间没有空白列的格不拆成左右小注（k6，Sheldon 11-13 人审「单字被切成左右小注」）。"""
 import numpy as np
 
-from guji_book.quantangwen import jiazhu_split as J
+from guji_book.quantangwen import row_hooks as J
 
 W = 100
 
@@ -24,7 +24,7 @@ def test_left_right_char_has_no_gap():
     p = _pair(6)
     p[25:28, 14:86] = 0                                          # 横笔贯穿两部件
     assert not J.has_mid_gap(p)
-    assert J.forced_split_center(p) is None
+    assert not J.jiazhu_pair_ok(p, J.INK_THRESHOLD, forced=True)
 
 
 def test_frame_line_does_not_hide_gap():
@@ -32,4 +32,4 @@ def test_frame_line_does_not_hide_gap():
     p = _pair(6)
     p[55:58, 2:98] = 0
     assert J.has_mid_gap(p)
-    assert J.forced_split_center(p) is not None
+    assert J.jiazhu_pair_ok(p, J.INK_THRESHOLD, forced=True)
