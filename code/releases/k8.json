@@ -1,0 +1,21 @@
+{
+ "digest": "fbbdea94e5302485bd679d7c734aa96959473b0e1b831bb306d3580de68e93b8",
+ "files": {
+  "README.md": "420d1a95cdb8f0871f80397759c8aabf4ef667765fd6f4da0dc8774812d1061a",
+  "code.yaml": "4b66a23d4afbdc326f52c590aa2537d030b820c534fe4330375481305dbf2814",
+  "defaults.yaml": "3b6352700aaa64d6f2eb7384caa86ad56edb1ca3fa552ec0d1213d9b892f8c4a",
+  "equiv.yaml": "a7243a2904a065b01ed36ca695a5a74146340a8248ad4f5c8091e6b6eb8366f2",
+  "row_hooks.py": "2af14d4bf23c940d18507784afee639cf35b1fb90b7e9686ae17d088b15ebcfb",
+  "samples.yaml": "7e8e01db30988c6ea5b1f462ee5618de29203f92eb69a2072bf3278420698d5b",
+  "tests/conftest.py": "b94e077db06eea736dd6ac2828b5e8fe0787cfc5cf17f23c9dccf79e0a738ef7",
+  "tests/test_quantangwen_edge_frame.py": "d5647c71a0dadc79bee68f711d21613ae371e8bb9e8cf1b772b53a33acd08754",
+  "tests/test_quantangwen_half_a.py": "97b883a7da78c03822f85d91f232907b089b5ee1265d335388bbafeaa8ae6d9e",
+  "tests/test_quantangwen_iso_row.py": "76d70aee0f3641c4997df67a6b64892d93f56ec247a754e4227a81ac94584009",
+  "tests/test_quantangwen_mid_gap.py": "e0060e017c49a36b3cddf2e66847c11072cb2c92b22c6648c2240e5d7d16a7ba",
+  "tests/test_quantangwen_short_rephase.py": "ae77ce4456066ac312bed47bd62a7eede813ab89115439d60de6a1a4cd47e7dd",
+  "tests/test_quantangwen_single_head.py": "6de846b10542c3bb5a0880f4d1f7dc8c6db6357b2ba0a85d1e8e9fa5ab4b02df"
+ },
+ "k": 8,
+ "note": "k8：fork 改 row_hooks 钩子＋edge_frame_only（R018 空列首格粗条记空），cv>=0.7.36",
+ "tested_cv": "0.7.36"
+}
