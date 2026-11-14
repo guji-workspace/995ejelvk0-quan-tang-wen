@@ -1,0 +1,34 @@
+{
+ "kind": "rerun",
+ "book": "113",
+ "cv": "64bb2935ba83f1477483d76ca5ea51fd7cb57fa2",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文册 113 合轮 s1（031–120）：中心库 ≥1004173（k7 code: 7；ruling_first [jys]；q1L3 39 条；字形线人裁＋吉错例撤）；base cv0.7.31-c70-g-02bb02-k6-qtw113-q1-a2，从 glyph_match 起；cv v0.7.35（64bb293）；GUJI-749",
+ "output": {
+  "change": "qtw113-s1",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1",
+  "GUJI_CORPUS_DRIFT": "warn"
+ },
+ "steps": {
+  "from": "glyph_match",
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": []
+  }
+ },
+ "checks": {},
+ "cv_ref": "64bb2935ba83f1477483d76ca5ea51fd7cb57fa2",
+ "base": "cv0.7.31-c70-g-02bb02-k6-qtw113-q1-a2"
+}
