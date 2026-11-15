@@ -338,8 +338,51 @@ def jiazhu_heads(entries, runs, patches, eligible=None, ink_threshold: int = INK
 PAIR_BAND = (0.30, 0.70)
 
 
+#: k9（2026-11-15，w1 闸 001 姓氏韻編页）：雙行小注两字挨着、中缝被一两笔连上（「十八」「九百」「五百」），
+#: k6 的「中缝一列 ≤1 点」拆不开，001 韻編页 367 格并成整格。左右结构的整字墨框近方（k6 反例 勳勞勝樓作 宽高比 0.97–1.33，
+#: 中缝最少一列墨 ≥0.069 墨高），001 韻編页的并排两字明显扁（宽高比中位 2.2，95% ≥1.93；挨得最紧的「九百」「八百」1.60–1.70；中缝 ≤0.05 墨高，宽高比 ≥2 的 ≤0.055）。
+#: cv 在段里复查时一律传 forced=False（人指认的格也一样），所以两处用同一条判据，阈值取在反例与 001 之间偏保守。
+WIDE_PAIR_ASPECT = 1.5      # 墨框宽 ≥ 此 × 墨框高
+WIDE_PAIR_TOUCH = 0.05      # 中段（FORCED_BAND）最少一列墨 ≤ 此 × 墨框高
+WIDE_PAIR_TOUCH_VERY = 0.08  # 墨框宽 ≥ 2 倍高时（整字不会这么扁）中缝连笔可以粗一点
+
+
+def wide_touching_pair(patch: np.ndarray, ink_threshold: int = INK_THRESHOLD) -> bool:
+    """扁的墨框、中段只有一两笔连着：并排两字挨上了。框线行先去掉（同 has_mid_gap）。"""
+    binary = _binary(patch, ink_threshold).copy()
+    if binary.sum() < 80:
+        return False
+    xp0 = binary.sum(axis=0)
+    ink0 = np.flatnonzero(xp0 > 0)
+    if len(ink0) < 10:
+        return False
+    w0 = int(ink0[-1]) - int(ink0[0]) + 1
+    k = max(9, int(GAP_LINE_SEG * w0))
+    horiz = cv2.morphologyEx(binary, cv2.MORPH_OPEN, cv2.getStructuringElement(cv2.MORPH_RECT, (k, 1)))
+    h = binary.shape[0]
+    rows = np.flatnonzero(horiz.sum(axis=1) >= GAP_LINE_W * w0)
+    rows = rows[(rows < GAP_LINE_EDGE * h) | (rows >= (1 - GAP_LINE_EDGE) * h)]
+    for y in rows:
+        binary[max(0, y - 2):y + 3] = 0
+    ys = np.flatnonzero(binary.sum(axis=1) >= 2)
+    xp = binary.sum(axis=0)
+    xs = np.flatnonzero(xp >= 2)
+    if len(ys) < 10 or len(xs) < 10:
+        return False
+    ih = int(ys[-1]) - int(ys[0]) + 1
+    x0, x1 = int(xs[0]), int(xs[-1])
+    span = x1 - x0 + 1
+    if span < WIDE_PAIR_ASPECT * ih:
+        return False
+    lo = x0 + int(span * FORCED_BAND[0])
+    hi = x0 + int(np.ceil(span * FORCED_BAND[1]))
+    touch = WIDE_PAIR_TOUCH_VERY if span >= 2 * ih else WIDE_PAIR_TOUCH
+    return bool(xp[lo:hi + 1].min() <= touch * ih)
+
+
 def jiazhu_pair_ok(patch: np.ndarray, ink_threshold: int, forced: bool) -> bool:
-    return has_mid_gap(patch, ink_threshold, FORCED_BAND if forced else PAIR_BAND)
+    return (has_mid_gap(patch, ink_threshold, FORCED_BAND if forced else PAIR_BAND)
+            or wide_touching_pair(patch, ink_threshold))
 
 
 
