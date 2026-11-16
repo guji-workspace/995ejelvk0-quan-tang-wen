@@ -34,6 +34,7 @@ def test_next_row_full_width_is_not_adopted():
 
 def test_weak_gap_skipped_wide_gap_next_to_run_adopted():
     patches = {1: _patch(True, True), 2: _patch(True, False)}
-    assert J.single_row_heads([(1, (20.0, J.CC_MIN - 1)), (2, None)], {}, patches) == {}
+    # 缝弱、不认段头；第 2 格只占右半（k10 孤立右半小字）自己记成段，缝取它的左缘
+    assert J.single_row_heads([(1, (20.0, J.CC_MIN - 1)), (2, None)], {}, patches) == {2: 23.0}
     # 紧挨着已认的段、缝又宽（2026-11-13）：当段头收进来
     assert J.single_row_heads([(1, (20.0, 900.0)), (2, None)], {2: 20.0}, patches) == {1: 20.0}

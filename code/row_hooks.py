@@ -4,9 +4,9 @@ k1–k7 整份复制了 cv 的 row_boundaries、jiazhu_split（2026-11-04 分叉
 QTW 第 3 条）。k8 起只留与 cv 不同的几段，挂成钩子；两份 fork 删掉，其余照走 cv 的。四个钩子：
 
 - `grid_adjust`＝`rephase_short_grid`（k4 节末短列重定相位）。
-- `jiazhu_heads`＝`single_row_heads`（`jiazhu_single_head`：「字｜闕」＋「一」一行就完的雙行段头；k5 iso 量缝）。
+- `jiazhu_heads`＝`single_row_heads`（`jiazhu_single_head`：「字｜闕」＋「一」一行就完的雙行段头；k5 iso 量缝；k10 只占右半的孤立小字）。
 - `half_a_left`＝`_half_a_left`（`jiazhu_half_a`：奇数字段尾的右半格左缘）。
-- `jiazhu_pair_ok`＝`has_mid_gap`（k6：两行之间总有白缝，没缝的是左右结构整字，不拆）。
+- `jiazhu_pair_ok`＝`has_mid_gap`（k6：两行之间总有白缝，没缝的是左右结构整字，不拆；k9 挨着的并排两字；k10 右半孤立小字留在段里）。
 
 函数体与常量逐字照抄 k7 的 fork（只把 `jiazhu_split.X` 换成本模块的 X）；改动以后照常过期。
 """
@@ -127,6 +127,20 @@ def single_row_heads(entries: list[tuple[int, tuple[float, float] | None]], runs
             out[i] = m[0]
         elif (m is None or m[1] >= CC_MIN) and (cxp := _pair_wide_gap(patches[i], ruler, ink_threshold)) is not None:
             out[i] = cxp
+    # k10 只占右半的孤立小字（2026-11-16，Sheldon：「并序」「疑」小写数字「闕」……所有只占右半边的小字都标小注）：
+    # 前后都不连段、左半没字，`solo_notes`（右半墨 ≥0.93）常漏。记成段（只一行），缝取小字左缘，发格时左半无墨只发 a 半。
+    # 格位表／配页记成正文的格，cv 随后按 `forced_main` 摘回整格——那些要表里同时标 half（台账 R031）；这里管表标了 half
+    # 而列里没有雙行段（cv 不并段、`solo_notes` 又不认）和表里没有这列的格。紧接其后的右半字（「并序」的「序」）由段端收编收。
+    centers = [b for b in (_ink_box(patches[i], ink_threshold) for i in sorted(patches)
+                           if eligible is None or i in eligible) if b is not None]
+    wide = [(b[0] + b[1]) / 2.0 for b in centers if b[1] - b[0] >= RH_WIDE]
+    col_c = float(np.median(wide)) if wide else 0.5
+    for i in sorted(patches):
+        if i in runs or i in out or i - 1 in runs or i - 1 in out or (eligible is not None and i not in eligible):
+            continue                     # 段下一格归 `adopt_run_tails` 收單字尾，不抢
+        x0 = lone_right_small(patches[i], col_c, ink_threshold)
+        if x0 is not None:
+            out[i] = float(x0)
     return out
 
 def _pair_wide_gap(patch: np.ndarray, ruler: float | None,
@@ -382,7 +396,51 @@ def wide_touching_pair(patch: np.ndarray, ink_threshold: int = INK_THRESHOLD) ->
 
 def jiazhu_pair_ok(patch: np.ndarray, ink_threshold: int, forced: bool) -> bool:
     return (has_mid_gap(patch, ink_threshold, FORCED_BAND if forced else PAIR_BAND)
-            or wide_touching_pair(patch, ink_threshold))
+            or wide_touching_pair(patch, ink_threshold)
+            or lone_right_small(patch, None, ink_threshold) is not None)   # k10：右半孤立小字本来就不是并排两字
+
+
+# ── 只占右半的孤立小字（k10，2026-11-16，台账 R029）──────────────────────────────
+# 全唐文小注里只有一个字、排在右半的：「闕」「并序」「疑」、小写数字「二」「三十」……左半空着。cv `solo_notes` 要右半墨 ≥0.93，
+# 刻得往左探一点（「疑」「并」左缘 0.40–0.45 格宽）就漏，整格当正文大字。量墨框（去面积 < `HALF_A_MIN_AREA` 的散点）：
+# 左缘 ≥ `RH_X0`、右缘 ≥ `RH_X1`、宽 ≤ `RH_W`（格框宽的比例）。反例：正文窄字「卜」「自」「日」也偏右，但右缘到不了 0.78；
+# 偏列（列网没对准，整列字都往右挪，001–030 第 9 列多见）整字也能过前三条，所以还要比本列整字（墨框宽 ≥ `RH_WIDE`）墨框中心的中位数偏右 ≥ `RH_SHIFT`。
+RH_X0 = 0.40
+RH_X1 = 0.82
+RH_W = 0.53
+RH_SHIFT = 0.12
+RH_WIDE = 0.6       # 本列中位只取墨框宽 ≥ 此的整字（列首「卷十二」一串小字时不被带偏）
+
+
+def _ink_box(patch: np.ndarray | None, ink_threshold: int = INK_THRESHOLD):
+    """墨框 (x0, x1, y0, y1)，按格框宽归一的 x；去掉面积 < `HALF_A_MIN_AREA` 的散点。没墨返回 None。"""
+    if patch is None or patch.size == 0:
+        return None
+    ink = (patch < ink_threshold).astype(np.uint8)
+    n, _lab, st, _ = cv2.connectedComponentsWithStats(ink, connectivity=8)
+    keep = [k for k in range(1, n) if st[k, cv2.CC_STAT_AREA] >= HALF_A_MIN_AREA]
+    if not keep:
+        return None
+    w = float(patch.shape[1])
+    x0 = min(int(st[k, 0]) for k in keep)
+    x1 = max(int(st[k, 0] + st[k, 2]) for k in keep)
+    y0 = min(int(st[k, 1]) for k in keep)
+    y1 = max(int(st[k, 1] + st[k, 3]) for k in keep)
+    return x0 / w, x1 / w, y0, y1
+
+
+def lone_right_small(patch: np.ndarray | None, col_center: float | None,
+                     ink_threshold: int = INK_THRESHOLD) -> int | None:
+    """这一格是只占右半的小字 → 返回小字左缘（格内 x，作缝）；不是返回 None。`col_center` 为 None 时不查偏列。"""
+    b = _ink_box(patch, ink_threshold)
+    if b is None:
+        return None
+    x0, x1 = b[0], b[1]
+    if x0 < RH_X0 or x1 < RH_X1 or x1 - x0 > RH_W:
+        return None
+    if col_center is not None and (x0 + x1) / 2.0 - col_center < RH_SHIFT:
+        return None
+    return max(1, int(np.floor(x0 * patch.shape[1])) - 1)
 
 
 
