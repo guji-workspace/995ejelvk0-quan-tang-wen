@@ -1,0 +1,22 @@
+{
+ "digest": "6f369addeb9e7d7114f4ee586751de7adbf3df775808c33036aa83bcbb236c4f",
+ "files": {
+  "README.md": "420d1a95cdb8f0871f80397759c8aabf4ef667765fd6f4da0dc8774812d1061a",
+  "code.yaml": "4b66a23d4afbdc326f52c590aa2537d030b820c534fe4330375481305dbf2814",
+  "defaults.yaml": "3b6352700aaa64d6f2eb7384caa86ad56edb1ca3fa552ec0d1213d9b892f8c4a",
+  "equiv.yaml": "a7243a2904a065b01ed36ca695a5a74146340a8248ad4f5c8091e6b6eb8366f2",
+  "row_hooks.py": "9f507ec48bb8dca4ae981694f0ac5adab993072b33ba0609df3c9ea8fbba35c5",
+  "samples.yaml": "7e8e01db30988c6ea5b1f462ee5618de29203f92eb69a2072bf3278420698d5b",
+  "tests/conftest.py": "b94e077db06eea736dd6ac2828b5e8fe0787cfc5cf17f23c9dccf79e0a738ef7",
+  "tests/test_quantangwen_edge_frame.py": "d5647c71a0dadc79bee68f711d21613ae371e8bb9e8cf1b772b53a33acd08754",
+  "tests/test_quantangwen_half_a.py": "97b883a7da78c03822f85d91f232907b089b5ee1265d335388bbafeaa8ae6d9e",
+  "tests/test_quantangwen_iso_row.py": "d3658743936b0bbde95c275e0d176548cc68d7a0fa0ac7415fb5342b11c5bb84",
+  "tests/test_quantangwen_lone_right.py": "6fbb3a8becf7a67e9f26e4c277ca8ae53f41c2d62b722d8b0901a249f6ebcea3",
+  "tests/test_quantangwen_mid_gap.py": "bb9cd8c964dc36e28e7ef1921827dc7c940ac34ef8d1f369c84634da0fdd7b18",
+  "tests/test_quantangwen_short_rephase.py": "ae77ce4456066ac312bed47bd62a7eede813ab89115439d60de6a1a4cd47e7dd",
+  "tests/test_quantangwen_single_head.py": "ab749ceb92122ace04632580fdeca41b33bd9422055a04b816bc3d683c3dee37"
+ },
+ "k": 11,
+ "note": "k11：孤立一行并排两字每侧墨框宽 ≥0.31 格宽（孔、則被中缝劈开不算小注，Sheldon 11-16 报 002:118:3:9），cv>=0.7.36",
+ "tested_cv": "0.7.42"
+}
