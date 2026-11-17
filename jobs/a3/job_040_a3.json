@@ -7,7 +7,7 @@
  "force": true,
  "ws_glob": "995ejelvk0-*",
  "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
- "why": "QTW 全唐文第二波（031–045）首轮 a3 册 040：cv v0.7.53（5a 分段 glyph_match.stages，Sheldon 11-16；row_segment 1.51 #1587）＋书级 k11（夹注每侧宽，R032）＋031–045 A1 覆盖行 30 条（书库 v79）＋右半小字 k10；中心库 ≥1026361（底库 b27）；base cv0.7.37-c71-g-b4081c-k8-qtw040-u1，从 column_gate 起；对现 main 过 seg gate、格号变比对；GUJI-749",
+ "why": "QTW 全唐文第二波（031–045）首轮 a3 册 040：cv v0.7.53（5a 分段 glyph_match.stages，Sheldon 11-16；row_segment 1.51 #1587）＋书级 k11（夹注每侧宽，R032）＋031–045 A1 覆盖行 30 条（书库 v79）＋右半小字 k10；中心库 ≥1026361（底库 b27）；base cv0.7.37-c71-g-b4081c-k8-qtw040-u1，从 column_warp 起；对现 main 过 seg gate、格号变比对；GUJI-749",
  "output": {
   "change": "qtw040-a3",
   "note": null,
@@ -18,7 +18,7 @@
   "GUJI_CORPUS_DRIFT": "warn"
  },
  "steps": {
-  "from": "column_gate",
+  "from": "column_warp",
   "to": null
  },
  "params": {
