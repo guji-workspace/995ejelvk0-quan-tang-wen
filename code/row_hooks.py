@@ -123,7 +123,8 @@ def single_row_heads(entries: list[tuple[int, tuple[float, float] | None]], runs
             continue
         m = measured.get(i)
         if m is not None and m[1] >= CC_MIN and _iso_wide_gap(patches[i], m[0], ink_threshold) \
-                and not _thin_stroke_side(patches[i], m[0], ink_threshold):
+                and not _thin_stroke_side(patches[i], m[0], ink_threshold) \
+                and not _narrow_side(patches[i], m[0], ink_threshold):
             out[i] = m[0]
         elif (m is None or m[1] >= CC_MIN) and (cxp := _pair_wide_gap(patches[i], ruler, ink_threshold)) is not None:
             out[i] = cxp
@@ -175,7 +176,7 @@ def _pair_wide_gap(patch: np.ndarray, ruler: float | None,
     if max(left.shape[1], right.shape[1]) > MASS_W * span:
         return None
     cx = float(best[0] + best[1]) / 2
-    if _thin_stroke_side(patch, cx, ink_threshold):
+    if _thin_stroke_side(patch, cx, ink_threshold) or _narrow_side(patch, cx, ink_threshold):
         return None
     return cx
 
@@ -200,6 +201,33 @@ def _thin_stroke_side(patch: np.ndarray, cx: float, ink_threshold: int = INK_THR
             return True
     return False
 
+def _side_boxes(patch: np.ndarray, cx: float, ink_threshold: int = INK_THRESHOLD):
+    """缝 `cx` 两侧各自的墨框（去散点）`(x0, x1, y0, y1)`，没墨的一侧为 None；连同格框宽高。"""
+    binary = _strip_rule_rows(_binary(patch, ink_threshold))
+    h, w = binary.shape
+    c = int(round(cx))
+    out = []
+    for side in (binary[:, :c], binary[:, c:]):
+        if side.size == 0 or not side.any():
+            out.append(None)
+            continue
+        n, _lab, stats, _cen = cv2.connectedComponentsWithStats(np.ascontiguousarray(side), 8)
+        keep = [k for k in range(1, n) if stats[k, 4] >= THIN_SIDE_SPECK * side.sum()]
+        if not keep:
+            out.append(None)
+            continue
+        out.append((min(stats[k, 0] for k in keep), max(stats[k, 0] + stats[k, 2] for k in keep),
+                    min(stats[k, 1] for k in keep), max(stats[k, 1] + stats[k, 3] for k in keep)))
+    return out, w, h
+
+
+def _narrow_side(patch: np.ndarray, cx: float, ink_threshold: int = INK_THRESHOLD) -> bool:
+    """k11（2026-11-16，Sheldon 报 002:118:3:9「孔」）：缝某一侧墨框宽 < `ISO_SIDE_MIN_W`×格框宽 → 是一个
+    左右结构正文字被中缝劈开（孔＝孑｜乚、則＝貝｜刂），不是并排两个小字。并排小注每侧是一整个小字、各占半格，
+    墨框宽 001–030 实测最窄 0.35；劈开的正文字两半合起来才一个字宽，窄的一侧 0.16–0.26。"""
+    boxes, w, _h = _side_boxes(patch, cx, ink_threshold)
+    return any(b is not None and (b[1] - b[0]) < ISO_SIDE_MIN_W * w for b in boxes)
+
 #: 孤立一行的雙行小注（2026-11-13 全唐文 g5 层 1，切分线）：碑誌正文页（reference_profile text）列首、列尾、列中
 #: 只有一行的「闕｜一」「其｜三」两字并排，`link_runs` 要连两行、`single_row_heads` 原判据要下一格是右半单字尾，
 #: 都落空，两字挤成一个整宽格（g5 正文页宽格 341 个，列尾 96、列首／列中孤立 201）。单格 `gap_center` 会被左右
@@ -220,6 +248,8 @@ RULE_EDGE = 0.2             # 只在格上下各这么高的带里找框线行
 RULE_ROW_PAD = 6           # 框线行上下连带抹掉的行数（px）
 
 ISO_SIDE_MIN_INK = 40     # 宽缝并排两字每侧墨下限（px），「一」一横约 150–300
+
+ISO_SIDE_MIN_W = 0.31     # k11 孤立一行认成并排两字时每侧墨框宽下限（× 格框宽）：小注 ≥0.35，劈开的正文字 ≤0.26
 
 def _strip_rule_rows(binary: np.ndarray) -> np.ndarray:
     """抹掉横贯格框的行（列尾下版框线、列首上框条：一行墨 ≥`RULE_ROW_FRAC`×格框宽），不让它把中缝填死

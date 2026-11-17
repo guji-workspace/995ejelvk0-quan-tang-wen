@@ -56,3 +56,23 @@ def test_thin_left_numeral_pair_is_adopted_even_under_rule_line():
 
 def test_pair_wide_gap_rejects_one_sided_cell():
     assert J._pair_wide_gap(_pair(10, left_ink=False), W) is None
+
+
+def _kong() -> np.ndarray:
+    """「孔」：孑｜乚 中缝宽，但两半合起来才一个字宽，每侧墨框都窄（002:118:3:9，k11）。"""
+    p = np.full((40, W), 255, np.uint8)
+    p[6:30, 18:44] = 0          # 孑（宽 0.26）
+    p[3:37, 62:80] = 0          # 乚（宽 0.18）
+    return p
+
+
+def test_split_body_char_kong_is_not_adopted():
+    p = _kong()
+    assert J._narrow_side(p, 53.0)
+    assert J._pair_wide_gap(p, W * 0.9) is None
+    assert J.single_row_heads([(1, (53.0, 900.0))], {}, {1: p}, eligible={1}, ruler=W * 0.9) == {}
+
+
+def test_full_half_pair_is_not_narrow():
+    assert not J._narrow_side(_pair(10), 50.0)
+    assert not J._narrow_side(_thin_one(), 50.0)

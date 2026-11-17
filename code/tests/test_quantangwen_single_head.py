@@ -7,9 +7,9 @@ from guji_book.quantangwen import row_hooks as J
 def _patch(right: bool, left: bool, w: int = 40, h: int = 40) -> np.ndarray:
     p = np.full((h, w), 255, np.uint8)
     if right:
-        p[5:35, 24:36] = 0
+        p[5:35, 24:38] = 0          # 小字各占约 0.35 格宽（001–030 实测并排小注每侧 ≥0.35，k11）
     if left:
-        p[5:35, 4:16] = 0
+        p[5:35, 2:16] = 0
     return p
 
 
