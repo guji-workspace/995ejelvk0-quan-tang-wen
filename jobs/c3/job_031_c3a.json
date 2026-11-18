@@ -1,0 +1,34 @@
+{
+ "kind": "rerun",
+ "book": "031",
+ "cv": "6ae0955ba99b760c29515845ffebb635f145362f",
+ "pipeline": "keben_body_v2",
+ "pages": "8,10,11,15,20,23,27,39,41,45,48,52,54,61,62,75,76,80,87,88,93,101,113,123,125,127,146,150,153,160,166,167,168",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文 c3A 册 031（15 册一批 031–045，只重跑受影响页）：cv v0.7.68；切分线 #1658 两开关 inner_bar_span／long_rule_outer_only＋书库 v83 覆盖（中心库 ≥1118296，底库 b27）；只跑切分线清单 33 页，column_warp→cell_shrink；base cv0.7.60-c76-g-794884-k11-qtw031-b3-a4；GUJI-749",
+ "output": {
+  "change": "qtw031-c3a",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1",
+  "GUJI_CORPUS_DRIFT": "warn"
+ },
+ "steps": {
+  "from": "column_warp",
+  "to": "cell_shrink"
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": []
+  }
+ },
+ "checks": {},
+ "cv_ref": "6ae0955ba99b760c29515845ffebb635f145362f",
+ "base": "cv0.7.60-c76-g-794884-k11-qtw031-b3-a4"
+}
