@@ -1,0 +1,34 @@
+{
+ "kind": "rerun",
+ "book": "005",
+ "cv": "6ae0955ba99b760c29515845ffebb635f145362f",
+ "pipeline": "keben_body_v2",
+ "pages": "11,13,18,22,27,28,31,32,38,40,44,48,49,50,51,53,60,62,63,69,71,73,74,75,77,80,81,84,86,87,89,91,93,94,96,97,100,104,105,113,117,120,129,132,133,135,147,157,158,160,162,163,166,167,168,171,175,176,177,180,181,182,184,185,190,196,198,199,205,206,207,208,209,210,212,213,214,216,221",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文 c1A 册 005（15 册一批第 1 批，只重跑受影响页）：cv v0.7.68；切分线 #1658 两开关 inner_bar_span／long_rule_outer_only＋书库 v83 覆盖（中心库 ≥1118296，底库 b27）；只跑切分线清单 79 页，column_warp→cell_shrink；base cv0.7.60-c80-g-794884-k11-qtw005-b3-a2；GUJI-749",
+ "output": {
+  "change": "qtw005-c1a",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1",
+  "GUJI_CORPUS_DRIFT": "warn"
+ },
+ "steps": {
+  "from": "column_warp",
+  "to": "cell_shrink"
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": []
+  }
+ },
+ "checks": {},
+ "cv_ref": "6ae0955ba99b760c29515845ffebb635f145362f",
+ "base": "cv0.7.60-c80-g-794884-k11-qtw005-b3-a2"
+}
