@@ -1,0 +1,33 @@
+{
+ "kind": "rerun",
+ "book": "011",
+ "cv": "f067579a1b1c704fbbc9395b76dda033477984e6",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文 d1 册 011（四层法 001–045 第二轮，只跑受影响册，切分不动）：从 glyph_match 起全册；cv v0.7.71（#1673 改标进文本、#1678 𦫵→升）＋底库 b30／书库 v85（rev 1131499）；形近字 rev 1119920/1120010/1131300(zy)/1131317(jys)；字形回库 rev 1131280；切分书库 v84 rev 1131211；base cv0.7.68-c80-g-794884-k11-qtw011-c1；GUJI-749",
+ "output": {
+  "change": "qtw011-d1",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1"
+ },
+ "steps": {
+  "from": "glyph_match",
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": []
+  }
+ },
+ "checks": {},
+ "cv_ref": "f067579a1b1c704fbbc9395b76dda033477984e6",
+ "base": "cv0.7.68-c80-g-794884-k11-qtw011-c1"
+}
