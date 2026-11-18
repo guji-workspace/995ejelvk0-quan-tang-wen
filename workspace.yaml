@@ -1,3 +1,7 @@
 # 控制台 URL 上露出来的工作区 id（`/<ws>/<book>/step/...`）。
 # 不给就退回目录名，整串中文进 URL 太长，这里固定成短 id。
 id: 995ejelvk0
+
+# 缺例字放行格自动回库（Sheldon 11-17 16:15 PST 定；要 guji-manager 含 #617；GUJI_AUTO_BACKFILL=0 临时关；回库后 db sync 只在有全量库的机器做）
+glyph_lib:
+  auto_backfill: true
