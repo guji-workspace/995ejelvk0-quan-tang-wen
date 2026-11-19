@@ -1,0 +1,33 @@
+{
+ "kind": "rerun",
+ "book": "005",
+ "cv": "413132315739b1fd9159d379d267536f1adcfdc3",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文 d2 册 005（四层法 001–045 第三轮，补库＋刻形例影响全册，切分不动）：从 glyph_match 起全册；cv v0.7.74（4131323＝v0.7.71＋#1707 lane_lib_veto＋#1701 库字档）＋底库 b30／书库 v86；书级开 font.charset.lib_chars、seed_admit.lane_lib_veto 0.98（rev 1234145，Sheldon 11-19 放行）；字形 刻形例 qtw-auto-form-1118（rev 1147174）＋补库 qtw-auto-backfill-1118（rev 1234141）＋字形线 rev 1147633；形近字 rev 1142597、1147743；切分 书库 v86 rev 1142546／1147637；base cv0.7.71-c81-g-0b3de8-k11-qtw005-d1；GUJI-749",
+ "output": {
+  "change": "qtw005-d2",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1"
+ },
+ "steps": {
+  "from": "glyph_match",
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": []
+  }
+ },
+ "checks": {},
+ "cv_ref": "413132315739b1fd9159d379d267536f1adcfdc3",
+ "base": "cv0.7.71-c81-g-0b3de8-k11-qtw005-d1"
+}
