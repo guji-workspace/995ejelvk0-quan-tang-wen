@@ -1,0 +1,62 @@
+{
+ "kind": "rerun",
+ "book": "019",
+ "cv": "14909483f95eddb0d22a2da09da48e8cafac5def",
+ "pipeline": "keben_body_v2",
+ "pages": "24",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文 v1 册 019（四层法，只跑受影响页 24）：seed_admit 起；cv v0.7.85（14909483，=v0.7.82＋group_flow_ref_alias，code_equiv 已登）；第④层 g1 批 ctx-m1 裁定 19 条 rev 1395894、閒 2 条按 f1 上下文重出 rev 1395686；spec 别名 {間:閒}；放行名单 24 对；base cv0.7.82-c81-g-a2a223-k11-qtw019-d4-a3；GUJI-749",
+ "output": {
+  "change": "qtw019-v1",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1"
+ },
+ "steps": {
+  "from": "seed_admit",
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": [],
+   "lane_lib_veto_pairs": [
+    "寇𡨥",
+    "奧奥",
+    "遙遥",
+    "皐臯",
+    "冑胄",
+    "冊𠕋",
+    "稟禀",
+    "污汚",
+    "并幷",
+    "祆祅",
+    "裨禆",
+    "汜氾",
+    "曡疊",
+    "㮣槩",
+    "場塲",
+    "望朢",
+    "襃裦",
+    "豎䜿",
+    "圯圮",
+    "冗宂",
+    "剿勦",
+    "協恊",
+    "柳栁",
+    "類𩔖"
+   ],
+   "group_flow_ref_alias": {
+    "間": "閒"
+   }
+  }
+ },
+ "checks": {},
+ "cv_ref": "14909483f95eddb0d22a2da09da48e8cafac5def",
+ "base": "cv0.7.82-c81-g-a2a223-k11-qtw019-d4-a3"
+}
