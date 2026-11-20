@@ -1,0 +1,50 @@
+{
+ "kind": "rerun",
+ "book": "050",
+ "cv": "578c77089eaebfde55d17ae36780287a2b6f601c",
+ "pipeline": "keben_body_v2",
+ "pages": "26",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文 e1b 册 050（e1 切分闸挡列补钉）：只跑 p26，从 row_segment 起；切分线钉子 rev 1394612（书库 v88＋b30，corpus 76）；cv v0.7.82；放行 15 对同 e1；base cv0.7.82-c75-g-a2a223-k11-qtw050-e1；GUJI-749",
+ "output": {
+  "change": "qtw050-e1b",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1"
+ },
+ "steps": {
+  "from": "row_segment",
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": [],
+   "lane_lib_veto_pairs": [
+    "寇𡨥",
+    "奧奥",
+    "遙遥",
+    "皐臯",
+    "冑胄",
+    "冊𠕋",
+    "稟禀",
+    "污汚",
+    "并幷",
+    "祆祅",
+    "裨禆",
+    "汜氾",
+    "曡疊",
+    "㮣槩",
+    "場塲"
+   ]
+  }
+ },
+ "checks": {},
+ "cv_ref": "578c77089eaebfde55d17ae36780287a2b6f601c",
+ "base": "cv0.7.82-c75-g-a2a223-k11-qtw050-e1"
+}
