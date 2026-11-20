@@ -1,0 +1,50 @@
+{
+ "kind": "rerun",
+ "book": "019",
+ "cv": "42e5d7d6e996e1299a5b57d21bddfe071117c88b",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文 d3 册 019（四层法 001–045 针对性补跑）：从 glyph_match 起全册；cv dev 42e5d7d6（≥v0.7.78，含 #1700 pair、#1727 lane_lib_veto_pairs）＋底库 b30／书库 v87；spec 开 seed_admit.lane_lib_veto_pairs（码位线 15 对）；字形 候/𠋫 人裁 rev 1234907、backfill-audit 撤 313 例 rev 1237012；形近字 库否决裁定 153 条 rev 1235061；切分 v87 rev 1235077（001 p63、008 p112、026 p141）；书级 pair 配置 rev 1234688；字形库快照 g17（rev 1238860）；base cv0.7.74-c81-g-03c8f4-k11-qtw019-d2-a6；GUJI-749",
+ "output": {
+  "change": "qtw019-d3",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1"
+ },
+ "steps": {
+  "from": "glyph_match",
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": [],
+   "lane_lib_veto_pairs": [
+    "寇𡨥",
+    "奧奥",
+    "遙遥",
+    "皐臯",
+    "冑胄",
+    "冊𠕋",
+    "稟禀",
+    "污汚",
+    "并幷",
+    "祆祅",
+    "裨禆",
+    "汜氾",
+    "曡疊",
+    "㮣槩",
+    "場塲"
+   ]
+  }
+ },
+ "checks": {},
+ "cv_ref": "42e5d7d6e996e1299a5b57d21bddfe071117c88b",
+ "base": "cv0.7.74-c81-g-03c8f4-k11-qtw019-d2-a6"
+}
