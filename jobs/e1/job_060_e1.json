@@ -1,0 +1,50 @@
+{
+ "kind": "rerun",
+ "book": "060",
+ "cv": "578c77089eaebfde55d17ae36780287a2b6f601c",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文 e1 册 060（四层法第 4 批 046–060 正式轮，Sheldon 11-18「15册一批」）：整册从头；cv v0.7.82（578c770，=dev a90cc10，含 #1727 lane_lib_veto_pairs、#1729 hou_shape、lib_chars）；书级代码 k11、底库 b30；中心库 ≥1392307（hou_shape.json rev 1392247；切分线 046–060 对齐 k11＋书库 v87＋底库 b30，corpus 75）；spec 开 seed_admit.lane_lib_veto_pairs（15 对）；GUJI-749",
+ "output": {
+  "change": "qtw060-e1",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1"
+ },
+ "steps": {
+  "from": null,
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": [],
+   "lane_lib_veto_pairs": [
+    "寇𡨥",
+    "奧奥",
+    "遙遥",
+    "皐臯",
+    "冑胄",
+    "冊𠕋",
+    "稟禀",
+    "污汚",
+    "并幷",
+    "祆祅",
+    "裨禆",
+    "汜氾",
+    "曡疊",
+    "㮣槩",
+    "場塲"
+   ]
+  }
+ },
+ "checks": {},
+ "cv_ref": "578c77089eaebfde55d17ae36780287a2b6f601c",
+ "base": null
+}
