@@ -1,0 +1,59 @@
+{
+ "kind": "rerun",
+ "book": "021",
+ "cv": "578c77089eaebfde55d17ae36780287a2b6f601c",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文 d4 册 021（四层法 001–045 针对性补跑）：全册从 seed_admit 起；cv v0.7.82（578c770）；候/𠋫 刻形 hou_shape.json rev 1392247（全书 seed_admit 指纹变）；形近字线 d3grp 裁定 143 条 rev 1392657；字形线 d2 低把握 34 格人裁 rev 1382154、候/𠋫 28 格 rev 1382248、007 p77 unk rev 1391859；spec 放行名单 24 对（码位线 +9 对）；base cv0.7.79.dev196pg42e5d7d6e996-c81-g-a2a223-k11-qtw021-d3-a6；GUJI-749",
+ "output": {
+  "change": "qtw021-d4",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1"
+ },
+ "steps": {
+  "from": "seed_admit",
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": [],
+   "lane_lib_veto_pairs": [
+    "寇𡨥",
+    "奧奥",
+    "遙遥",
+    "皐臯",
+    "冑胄",
+    "冊𠕋",
+    "稟禀",
+    "污汚",
+    "并幷",
+    "祆祅",
+    "裨禆",
+    "汜氾",
+    "曡疊",
+    "㮣槩",
+    "場塲",
+    "望朢",
+    "襃裦",
+    "豎䜿",
+    "圯圮",
+    "冗宂",
+    "剿勦",
+    "協恊",
+    "柳栁",
+    "類𩔖"
+   ]
+  }
+ },
+ "checks": {},
+ "cv_ref": "578c77089eaebfde55d17ae36780287a2b6f601c",
+ "base": "cv0.7.79.dev196pg42e5d7d6e996-c81-g-a2a223-k11-qtw021-d3-a6"
+}
