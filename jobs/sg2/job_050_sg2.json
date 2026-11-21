@@ -1,0 +1,62 @@
+{
+ "kind": "rerun",
+ "book": "050",
+ "cv": "5025860d7d8b93db8b598b2a0799aa56e931515b",
+ "pipeline": "keben_body_v2",
+ "pages": "7,21,22,42,64,65,66,67,68,70,89,92,93",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文 sg2 册 050（四层法层1 切分，046–060）：只跑 7,21,22,42,64,65,66,67,68,70,89,92,93 页，row_segment 起；切分线 rev 1405679 修好（manual-cells 整列写定；053 vline_overrides p31；052/054/056 table_cols 印列）；cv v0.7.89；base cv0.7.89-c76-g-631101-k11-qtw050-vd1；GUJI-749",
+ "output": {
+  "change": "qtw050-sg2",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1"
+ },
+ "steps": {
+  "from": "row_segment",
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": [],
+   "lane_lib_veto_pairs": [
+    "寇𡨥",
+    "奧奥",
+    "遙遥",
+    "皐臯",
+    "冑胄",
+    "冊𠕋",
+    "稟禀",
+    "污汚",
+    "并幷",
+    "祆祅",
+    "裨禆",
+    "汜氾",
+    "曡疊",
+    "㮣槩",
+    "場塲",
+    "望朢",
+    "襃裦",
+    "豎䜿",
+    "圯圮",
+    "冗宂",
+    "剿勦",
+    "協恊",
+    "柳栁",
+    "類𩔖"
+   ],
+   "group_flow_ref_alias": {
+    "間": "閒"
+   }
+  }
+ },
+ "checks": {},
+ "cv_ref": "5025860d7d8b93db8b598b2a0799aa56e931515b",
+ "base": "cv0.7.89-c76-g-631101-k11-qtw050-vd1"
+}
