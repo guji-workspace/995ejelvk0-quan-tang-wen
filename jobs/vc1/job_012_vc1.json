@@ -1,0 +1,62 @@
+{
+ "kind": "rerun",
+ "book": "012",
+ "cv": "12451df790c29fe2a3339c0cfa38df9692f768c9",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文 vc1 册 012（四层法，001–060 全册重放）：seed_admit 起 pages all；cv v0.7.87（12451df＝v0.7.85＋#1763 seed_admit 记 evidence.vis_ctx，指纹变、seed_admit 过期）；目的：出包后形近字线用 rulings-hits --rekey 按真窗口补失效裁定键；spec 别名 {間:閒}、放行名单 24 对；base cv0.7.82-c81-g-a2a223-k11-qtw012-d4-a4；GUJI-749",
+ "output": {
+  "change": "qtw012-vc1",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1"
+ },
+ "steps": {
+  "from": "seed_admit",
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": [],
+   "lane_lib_veto_pairs": [
+    "寇𡨥",
+    "奧奥",
+    "遙遥",
+    "皐臯",
+    "冑胄",
+    "冊𠕋",
+    "稟禀",
+    "污汚",
+    "并幷",
+    "祆祅",
+    "裨禆",
+    "汜氾",
+    "曡疊",
+    "㮣槩",
+    "場塲",
+    "望朢",
+    "襃裦",
+    "豎䜿",
+    "圯圮",
+    "冗宂",
+    "剿勦",
+    "協恊",
+    "柳栁",
+    "類𩔖"
+   ],
+   "group_flow_ref_alias": {
+    "間": "閒"
+   }
+  }
+ },
+ "checks": {},
+ "cv_ref": "12451df790c29fe2a3339c0cfa38df9692f768c9",
+ "base": "cv0.7.82-c81-g-a2a223-k11-qtw012-d4-a4"
+}
