@@ -1,0 +1,63 @@
+{
+ "kind": "rerun",
+ "book": "016",
+ "cv": "553668f7c1d998d993f12ff01702fca86ea94977",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文 pk1 册 016（A31 #1781 字对关系表 V/C 前后对比，测试，不标 main）：seed_admit 起 pages all；cv dev 553668f（v0.7.93＋#1781）；GUJI_CORPUS_DRIFT=warn；基线 cv0.7.93-c82-g-631101-k11-qtw016-vf1-a3；GUJI-749",
+ "output": {
+  "change": "qtw016-pk1",
+  "note": null,
+  "pack": true
+ },
+ "env": {
+  "GUJI_ALLOW_NO_EVENTS": "1",
+  "GUJI_CORPUS_DRIFT": "warn"
+ },
+ "steps": {
+  "from": "seed_admit",
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": [],
+   "lane_lib_veto_pairs": [
+    "寇𡨥",
+    "奧奥",
+    "遙遥",
+    "皐臯",
+    "冑胄",
+    "冊𠕋",
+    "稟禀",
+    "污汚",
+    "并幷",
+    "祆祅",
+    "裨禆",
+    "汜氾",
+    "曡疊",
+    "㮣槩",
+    "場塲",
+    "望朢",
+    "襃裦",
+    "豎䜿",
+    "圯圮",
+    "冗宂",
+    "剿勦",
+    "協恊",
+    "柳栁",
+    "類𩔖"
+   ],
+   "group_flow_ref_alias": {
+    "間": "閒"
+   }
+  }
+ },
+ "checks": {},
+ "cv_ref": "553668f7c1d998d993f12ff01702fca86ea94977",
+ "base": "cv0.7.93-c82-g-631101-k11-qtw016-vf1-a3"
+}
