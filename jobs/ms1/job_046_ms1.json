@@ -7,7 +7,7 @@
  "force": true,
  "ws_glob": "995ejelvk0-*",
  "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
- "why": "QTW 全唐文 W1 册 046（CV 里程碑 W1：cv v0.9.2＋新底库，从 border_detect 起重算（CV1 #1892 框线开关缺省开）；底库 b35（rev 1476926）；k/glyph_pin/model 不动）；base cv0.7.104-c77-g-640c04-k11-qtw046-vj1-a3；GUJI-749",
+ "why": "QTW 全唐文 W1 册 046（CV 里程碑 W1：cv v0.9.2＋新底库，从 border_detect 起重算（CV1 #1892 框线开关缺省开）；底库 b35（rev 1476926）；glyph_pin/model 不动；code 改 13（=k11＋admit_lanes，切分代码同 k11；rev 1477200））；base cv0.7.104-c77-g-640c04-k11-qtw046-vj1-a3；GUJI-749",
  "output": {
   "change": "qtw046-ms1",
   "note": null,
