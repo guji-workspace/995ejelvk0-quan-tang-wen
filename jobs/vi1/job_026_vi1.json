@@ -1,0 +1,60 @@
+{
+ "kind": "rerun",
+ "book": "026",
+ "cv": "55e56bb43d950af77096067b07f90c231f0579c6",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文 vi1 册 026（5a 换重训模型 glyph_sim_qtw_v2＋pair_clf v2 重训（含 剌刺 档3）＋字形线 刺剌 480 格人裁；Sheldon 11-24 定）：glyph_match 起 pages all；cv v0.7.101（v0.7.93＋#1849 模型表＋#1852 pair_clf 核对）；spec 别名 {間:閒}、放行名单 24 对；base cv0.7.93-c83-g-b630b2-k11-qtw026-vh3-a3；GUJI-749",
+ "output": {
+  "change": "qtw026-vi1",
+  "note": null,
+  "pack": true
+ },
+ "env": {},
+ "steps": {
+  "from": "glyph_match",
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": [],
+   "lane_lib_veto_pairs": [
+    "寇𡨥",
+    "奧奥",
+    "遙遥",
+    "皐臯",
+    "冑胄",
+    "冊𠕋",
+    "稟禀",
+    "污汚",
+    "并幷",
+    "祆祅",
+    "裨禆",
+    "汜氾",
+    "曡疊",
+    "㮣槩",
+    "場塲",
+    "望朢",
+    "襃裦",
+    "豎䜿",
+    "圯圮",
+    "冗宂",
+    "剿勦",
+    "協恊",
+    "柳栁",
+    "類𩔖"
+   ],
+   "group_flow_ref_alias": {
+    "間": "閒"
+   }
+  }
+ },
+ "checks": {},
+ "cv_ref": "55e56bb43d950af77096067b07f90c231f0579c6",
+ "base": "cv0.7.93-c83-g-b630b2-k11-qtw026-vh3-a3"
+}
