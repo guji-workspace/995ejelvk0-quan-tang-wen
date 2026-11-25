@@ -1,9 +1,9 @@
 {
- "digest": "7f4db1d32d9a5ca22dfdf5624d20a32f5bf8a185b572721664fb754da7803e6a",
+ "digest": "053171d7d0f3361a45562e67de3cc8c442a29fdf54f6526f12a2d9da94af3cfa",
  "files": {
   "README.md": "420d1a95cdb8f0871f80397759c8aabf4ef667765fd6f4da0dc8774812d1061a",
   "admit_lanes.py": "2bf2782c598a8df3befff30dacb174fb5c62b8274949b0ac37253d1237feb3ba",
-  "code.yaml": "8721b08a7f8cd3d4041a40201b3d13a17c446954230982bb3c7187d4deb0ecfb",
+  "code.yaml": "febb627dfe160a5a33b3caa0391c384c216aeb3e316366cd6486975dde9f17bd",
   "defaults.yaml": "3b6352700aaa64d6f2eb7384caa86ad56edb1ca3fa552ec0d1213d9b892f8c4a",
   "equiv.yaml": "a7243a2904a065b01ed36ca695a5a74146340a8248ad4f5c8091e6b6eb8366f2",
   "row_hooks.py": "9f507ec48bb8dca4ae981694f0ac5adab993072b33ba0609df3c9ea8fbba35c5",
@@ -22,6 +22,6 @@
   "tests/test_quantangwen_single_head.py": "ab749ceb92122ace04632580fdeca41b33bd9422055a04b816bc3d683c3dee37"
  },
  "k": 13,
- "note": "k13：001–003 四条无参照补放通道 solo_adapt／num_run／solo_cal／lead_5b 从 cv seed_admit 搬来（admit_lanes.py，覆盖 keben.admit_lanes；CV4 11-25，Sheldon 定），取值写册配置 seed_admit.book_lanes；k12 号留给切分线宽中缝（以 k13 为底重出 k14）；cv>=0.7.105（含 open-guji-cv#1867）",
+ "note": "k13：001–003 四条无参照补放通道 solo_adapt／num_run／solo_cal／lead_5b 从 cv seed_admit 搬来（admit_lanes.py，覆盖 keben.admit_lanes；CV4 11-25，Sheldon 定），取值写册配置 seed_admit.book_lanes；k12 号留给切分线宽中缝（以 k13 为底重出 k14）；cv>=0.7.106（v0.7.105 不含 open-guji-cv#1867，以实际含它的版本为准）",
  "tested_cv": "dev cv4/book-admit-lanes (open-guji-cv#1867)"
 }
