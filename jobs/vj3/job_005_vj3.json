@@ -1,0 +1,60 @@
+{
+ "kind": "rerun",
+ "book": "005",
+ "cv": "6a6e4084bc6bf11e1c23405b6b1617e038317c25",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文 vj3 册 005（vi1 时执行机字块缓存错位 p1/7/9/10/13 整列崩、未标 main；现执行机已换新机、领单前清盘）：以 vh3 为底，glyph_match 起 pages all 吃 5a glyph_sim_qtw_v2＋ruling_by_u＋新人裁；cv v0.7.104；GUJI-749",
+ "output": {
+  "change": "qtw005-vj3",
+  "note": null,
+  "pack": true
+ },
+ "env": {},
+ "steps": {
+  "from": "glyph_match",
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": [],
+   "lane_lib_veto_pairs": [
+    "寇𡨥",
+    "奧奥",
+    "遙遥",
+    "皐臯",
+    "冑胄",
+    "冊𠕋",
+    "稟禀",
+    "污汚",
+    "并幷",
+    "祆祅",
+    "裨禆",
+    "汜氾",
+    "曡疊",
+    "㮣槩",
+    "場塲",
+    "望朢",
+    "襃裦",
+    "豎䜿",
+    "圯圮",
+    "冗宂",
+    "剿勦",
+    "協恊",
+    "柳栁",
+    "類𩔖"
+   ],
+   "group_flow_ref_alias": {
+    "間": "閒"
+   }
+  }
+ },
+ "checks": {},
+ "cv_ref": "6a6e4084bc6bf11e1c23405b6b1617e038317c25",
+ "base": "cv0.7.93-c82-g-b630b2-k11-qtw005-vh3-a3"
+}
