@@ -1,0 +1,59 @@
+{
+ "kind": "rerun",
+ "book": "014",
+ "cv": "v0.9.2",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文 W1 册 014（CV 里程碑 W1：cv v0.9.2＋新底库，从 border_detect 起重算（CV1 #1892 框线开关缺省开）；底库 b35（rev 1476926）；k/glyph_pin/model 不动）；base cv0.7.104-c82-g-640c04-k11-qtw014-vj1-a2；GUJI-749",
+ "output": {
+  "change": "qtw014-ms1",
+  "note": null,
+  "pack": true
+ },
+ "env": {},
+ "steps": {
+  "from": "border_detect",
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": [],
+   "lane_lib_veto_pairs": [
+    "寇𡨥",
+    "奧奥",
+    "遙遥",
+    "皐臯",
+    "冑胄",
+    "冊𠕋",
+    "稟禀",
+    "污汚",
+    "并幷",
+    "祆祅",
+    "裨禆",
+    "汜氾",
+    "曡疊",
+    "㮣槩",
+    "場塲",
+    "望朢",
+    "襃裦",
+    "豎䜿",
+    "圯圮",
+    "冗宂",
+    "剿勦",
+    "協恊",
+    "柳栁",
+    "類𩔖"
+   ],
+   "group_flow_ref_alias": {
+    "間": "閒"
+   }
+  }
+ },
+ "checks": {},
+ "base": "cv0.7.104-c82-g-640c04-k11-qtw014-vj1-a2"
+}
