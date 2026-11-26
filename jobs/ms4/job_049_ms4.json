@@ -1,0 +1,60 @@
+{
+ "kind": "rerun",
+ "book": "049",
+ "cv": "v0.9.4",
+ "pipeline": "keben_body_v2",
+ "pages": "all",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文 031–060 合并重跑 ms4 册 049：四层法前三层已推库——层1 补钉 rev 1499523（053/056/060 从 row_segment 起）、层2 字形人裁 rev 1500024、层3 非AI形近字 rev 1499493；开 seed_admit.ruling_anchor_loose；lane_shape_first/pair_form 已在 book_defaults（rev 1498429）；cv v0.9.4、code 13、vline_track 关；base cv0.9.4-c77-g-640c04-k13-qtw049-ms3；GUJI-749",
+ "output": {
+  "change": "qtw049-ms4",
+  "note": null,
+  "pack": true
+ },
+ "env": {},
+ "steps": {
+  "from": "seed_admit",
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": [],
+   "lane_lib_veto_pairs": [
+    "寇𡨥",
+    "奧奥",
+    "遙遥",
+    "皐臯",
+    "冑胄",
+    "冊𠕋",
+    "稟禀",
+    "污汚",
+    "并幷",
+    "祆祅",
+    "裨禆",
+    "汜氾",
+    "曡疊",
+    "㮣槩",
+    "場塲",
+    "望朢",
+    "襃裦",
+    "豎䜿",
+    "圯圮",
+    "冗宂",
+    "剿勦",
+    "協恊",
+    "柳栁",
+    "類𩔖"
+   ],
+   "group_flow_ref_alias": {
+    "間": "閒"
+   },
+   "ruling_anchor_loose": true
+  }
+ },
+ "checks": {},
+ "base": "cv0.9.4-c77-g-640c04-k13-qtw049-ms3"
+}
