@@ -7,7 +7,7 @@
  "force": true,
  "ws_glob": "995ejelvk0-*",
  "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
- "why": "QTW 全唐文 031–060 合并重跑 ms4 册 047：四层法前三层已推库——层1 补钉 rev 1499523（053/056/060 从 row_segment 起）、层2 字形人裁 rev 1500024、层3 非AI形近字 rev 1499493；开 seed_admit.ruling_anchor_loose；lane_shape_first/pair_form 已在 book_defaults（rev 1498429）；cv v0.9.4、code 13、vline_track 关；base cv0.9.4-c78-g-640c04-k13-qtw047-ms3；GUJI-749",
+ "why": "QTW 全唐文 031–060 合并重跑 ms4 册 047：四层法前三层已推库——层1 补钉 rev 1499523＋1500028（036/053/055/056/060 从 row_segment 起）、层2 字形人裁 rev 1500024、层3 非AI形近字 rev 1499493；开 seed_admit.ruling_anchor_loose；lane_shape_first/pair_form 已在 book_defaults（rev 1498429）；cv v0.9.4、code 13、vline_track 关；base cv0.9.4-c78-g-640c04-k13-qtw047-ms3；GUJI-749",
  "output": {
   "change": "qtw047-ms4",
   "note": null,
