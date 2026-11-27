@@ -1,0 +1,60 @@
+{
+ "kind": "rerun",
+ "book": "046",
+ "cv": "v0.9.4",
+ "pipeline": "keben_body_v2",
+ "pages": "88",
+ "force": true,
+ "ws_glob": "995ejelvk0-*",
+ "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
+ "why": "QTW 全唐文册 046 只补跑 p88：切分线查明 Kanripo 半叶分界标错（book-text #529、书库 v90＋b35、rev 1546818），从 align_ref 起；其余页不动（v0.1 后只补受影响页）；base cv0.9.4-c78-g-a7720e-k13-qtw046-ms5-a8；GUJI-749",
+ "output": {
+  "change": "qtw046-ms6",
+  "note": null,
+  "pack": true
+ },
+ "env": {},
+ "steps": {
+  "from": "align_ref",
+  "to": null
+ },
+ "params": {
+  "seed_admit": {
+   "group_flow_llm_model": "rulings",
+   "group_flow_vis": false,
+   "group_flow_llm_panel_groups": [],
+   "lane_lib_veto_pairs": [
+    "寇𡨥",
+    "奧奥",
+    "遙遥",
+    "皐臯",
+    "冑胄",
+    "冊𠕋",
+    "稟禀",
+    "污汚",
+    "并幷",
+    "祆祅",
+    "裨禆",
+    "汜氾",
+    "曡疊",
+    "㮣槩",
+    "場塲",
+    "望朢",
+    "襃裦",
+    "豎䜿",
+    "圯圮",
+    "冗宂",
+    "剿勦",
+    "協恊",
+    "柳栁",
+    "類𩔖"
+   ],
+   "group_flow_ref_alias": {
+    "間": "閒"
+   },
+   "ruling_anchor_loose": true
+  }
+ },
+ "checks": {},
+ "base": "cv0.9.4-c78-g-a7720e-k13-qtw046-ms5-a8"
+}
