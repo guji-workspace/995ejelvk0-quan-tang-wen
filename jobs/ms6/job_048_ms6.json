@@ -7,7 +7,7 @@
  "force": true,
  "ws_glob": "995ejelvk0-*",
  "ws_repo": "guji-workspace/995ejelvk0-quan-tang-wen",
- "why": "QTW 全唐文册 048 只补跑 p42：切分线查明 Kanripo 半叶分界标错（book-text #529、书库 v90＋b35、rev 1546818），从 align_ref 起；其余页不动（v0.1 后只补受影响页）；base cv0.9.4-c78-g-a7720e-k13-qtw048-ms5-a5；GUJI-749",
+ "why": "QTW 全唐文册 048 只补跑 p42：切分线查明 Kanripo 半叶分界标错（book-text #529、书库 v90＋b35、rev 1546818），从 row_segment 起（配页也读 grid）；其余页不动（v0.1 后只补受影响页）；base cv0.9.4-c78-g-a7720e-k13-qtw048-ms5-a5；GUJI-749",
  "output": {
   "change": "qtw048-ms6",
   "note": null,
@@ -15,7 +15,7 @@
  },
  "env": {},
  "steps": {
-  "from": "align_ref",
+  "from": "row_segment",
   "to": null
  },
  "params": {
